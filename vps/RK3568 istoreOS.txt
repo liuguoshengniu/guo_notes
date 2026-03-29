@@ -1,0 +1,80 @@
+RK3568 istoreOS 或者qwrt旁路由
+Docker 离线包项目和下载:
+coolsnowwolf_qwrt_arm64-latest-arm64.tar.gz
+https://github.com/wukongdaily/DockerTarBuilder/releases
+wukongdaily_openwrt-istoreos_arm64-latest-arm64.tar.gz
+
+#compose(编排)配置：
+#----------------------------------------------------------------
+services:
+  ios:
+    # ARM64架构标签为arm64开头
+    # 默认arm64-latest是纯净版 arm64-ops是带插件版
+    image: wukongdaily/openwrt-istoreos:arm64-ops #arm64-latest
+    container_name: istoreos
+    privileged: true
+    restart: always #开机启动
+    command: /sbin/init
+    networks:
+      - ios_macnet
+        
+networks:
+  ios_macnet:
+    name: ios_macnet
+    driver: macvlan
+    driver_opts:
+      # 这里替换为你设备的网卡名称（比如eth0、end0、enp1s0、enp1s0-ovs等）ip link show可查
+      parent: eth0
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24 # 这里换成你的NAS所在的网段(比如192.168.100.0/24)
+          gateway: 192.168.100.9 # 这里换成你的NAS所在的网关（比如192.168.100.1）
+#----------------------------------------------------------------------------------------------------------------
+
+
+#RK3568,qwrt软路由部署（compose(编排)配置）：
+#------------------------------------------
+version: '3.8'
+
+services:
+  qwrt:
+    image: coolsnowwolf/qwrt:arm64-latest
+    container_name: qwrt
+    privileged: true
+    command: /sbin/init
+    restart: unless-stopped
+    networks:
+      qwrt_macnet:
+        ipv4_address: 192.168.100.7
+    dns:
+      - 192.168.100.9
+
+networks:
+  qwrt_macnet:
+    name: qwrt_macnet
+    driver: macvlan
+    driver_opts:
+      parent: eth0
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
+          gateway: 192.168.100.9
+#end
+；----------------------------------------------------------------------------------
+#芝麻开门
+RK3568开发板ssh上运行：
+echo 0xDEADBEEF > /etc/config/google_fu_mode
+#-------------------------------------------------------------------------------------------------
+
+rk3568 ssh
+rk3568开发板 ssh:
+192.168.100.38
+root
+22
+tony1234
+;
+rk3568 1Panel界面(debian11.7)
+设置1Panel端口 (默认是 37703): 
+http://192.168.100.29:37703/guo1panel
+ 您设置的面板用户是 guo1panel 
+1Panel面板密码:  tony1234
