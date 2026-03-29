@@ -1,0 +1,206 @@
+vless://d65163e5-751e-4580-8a07-de1a2d224792@23.94.247.230:14242?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=Q80DQDSbYffjlu4nbefgGRWdf8h5eoO218c9aWQU8iY&sid=94ba044e&type=tcp&headerType=none#vl-reality-ECS434156674944
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInZtLWFyZ28tRUNTNDM0MTU2Njc0OTQ0IiwNCiAgImFkZCI6ICJ3d3cudmlzYS5jb20uc2ciLA0KICAicG9ydCI6ICI4NDQzIiwNCiAgImlkIjogImQ2NTE2M2U1LTc1MWUtNDU4MC04YTA3LWRlMWEyZDIyNDc5MiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAidXFpZGN0bi44ODgxOTc3Lnh5eiIsDQogICJwYXRoIjogImQ2NTE2M2U1LTc1MWUtNDU4MC04YTA3LWRlMWEyZDIyNDc5Mi12bSIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICJ1cWlkY3RuLjg4ODE5NzcueHl6IiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiIsDQogICJpbnNlY3VyZSI6ICIwIg0KfQ==
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInZtLXdzLUVDUzQzNDE1NjY3NDk0NCIsDQogICJhZGQiOiAiMjMuOTQuMjQ3LjIzMCIsDQogICJwb3J0IjogIjIwNTIiLA0KICAiaWQiOiAiZDY1MTYzZTUtNzUxZS00NTgwLThhMDctZGUxYTJkMjI0NzkyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJ3d3cuYmluZy5jb20iLA0KICAicGF0aCI6ICJkNjUxNjNlNS03NTFlLTQ1ODAtOGEwNy1kZTFhMmQyMjQ3OTItdm0iLA0KICAidGxzIjogIiIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiIsDQogICJpbnNlY3VyZSI6ICIwIg0KfQ==
+hysteria2://d65163e5-751e-4580-8a07-de1a2d224792@23.94.247.230:18233?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#hy2-ECS434156674944
+tuic://d65163e5-751e-4580-8a07-de1a2d224792%3Ad65163e5-751e-4580-8a07-de1a2d224792@23.94.247.230:20686?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1&congestion_control=bbr#tu5-ECS434156674944
+vless://f63bb029-7ae5-4ded-8a84-fec9cc31e128@23.95.48.136:16221?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.iij.ad.jp&fp=firefox&pbk=MLgS4A7UdruxCiVDWKYPC9KU_11ZkIFdTVAFh6GBrxQ&type=tcp&headerType=none#US-RackNerd_LLC
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlVTLVJhY2tOZXJkX0xMQyIsDQogICJhZGQiOiAid3d3LnZpc2EuY29tLnR3IiwNCiAgInBvcnQiOiAiNDQzIiwNCiAgImlkIjogImY2M2JiMDI5LTdhZTUtNGRlZC04YTg0LWZlYzljYzMxZTEyOCIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAibm9uZSIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAicm4yenQuOTc4NjY4Lnh5eiIsDQogICJwYXRoIjogIi92bWVzcy1hcmdvP2VkPTI1NjAiLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAicm4yenQuOTc4NjY4Lnh5eiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICIiLA0KICAiaW5zZWN1cmUiOiAiMCINCn0=
+hysteria2://f63bb029-7ae5-4ded-8a84-fec9cc31e128@23.95.48.136:16224?alpn=h3&insecure=1&allowInsecure=1&mport=16224%2C53246-54000#US-RackNerd_LLC
+tuic://f63bb029-7ae5-4ded-8a84-fec9cc31e128%3A8qExDWdqNit94Eq9Bl8afS0Q@23.95.48.136:16223?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1&congestion_control=bbr#US-RackNerd_LLC
+hysteria2://0955f890-766a-41ee-8876-aefa2c7fb4aa@213.189.54.223:55446?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504-213.189.54.223
+hysteria2://0955f890-766a-41ee-8876-aefa2c7fb4aa@213.189.58.89:55446?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504-213.189.58.89
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInMyLXZtZXNzLXdzLXRscy1hcmdvLXRvbnk4OC0yNTA0IiwNCiAgImFkZCI6ICJ3d3cudmlzYS5jb20uaGsiLA0KICAicG9ydCI6ICI4NDQzIiwNCiAgImlkIjogIjA5NTVmODkwLTc2NmEtNDFlZS04ODc2LWFlZmEyYzdmYjRhYSIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAidW5venQuMzU2NzY1Lnh5eiIsDQogICJwYXRoIjogIi8wOTU1Zjg5MC03NjZhLTQxZWUtODg3Ni1hZWZhMmM3ZmI0YWEtdm0/ZWQ9MjA0OCIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICJ1bm96dC4zNTY3NjUueHl6IiwNCiAgImFscG4iOiAiIiwNCiAgImZwIjogIiIsDQogICJpbnNlY3VyZSI6ICIwIg0KfQ==
+hysteria2://0955f890-766a-41ee-8876-aefa2c7fb4aa@213.189.54.237:55446?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504
+vless://f8fbc2cd-b33d-4332-8cc1-3d98ef9f0542@23.95.68.6:36874?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.yahoo.com&fp=chrome&pbk=EP3mGdtF6knpVGgx5WW3qWnyRyf9vudnU9cQxdxTjCM&sid=43e5177f&type=tcp&headerType=none#vl-reality-racknerd-d4c3555
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInZtLWFyZ28tcmFja25lcmQtZDRjMzU1NSIsDQogICJhZGQiOiAid3d3LnZpc2EuY29tLnNnIiwNCiAgInBvcnQiOiAiODQ0MyIsDQogICJpZCI6ICJmOGZiYzJjZC1iMzNkLTQzMzItOGNjMS0zZDk4ZWY5ZjA1NDIiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogInJuenQuMzU2NzY1Lnh5eiIsDQogICJwYXRoIjogImY4ZmJjMmNkLWIzM2QtNDMzMi04Y2MxLTNkOThlZjlmMDU0Mi12bSIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICJybnp0LjM1Njc2NS54eXoiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiIiwNCiAgImluc2VjdXJlIjogIjAiDQp9
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInZtLXdzLXJhY2tuZXJkLWQ0YzM1NTUiLA0KICAiYWRkIjogIjIzLjk1LjY4LjYiLA0KICAicG9ydCI6ICIyMDk1IiwNCiAgImlkIjogImY4ZmJjMmNkLWIzM2QtNDMzMi04Y2MxLTNkOThlZjlmMDU0MiIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAid3d3LmJpbmcuY29tIiwNCiAgInBhdGgiOiAiZjhmYmMyY2QtYjMzZC00MzMyLThjYzEtM2Q5OGVmOWYwNTQyLXZtIiwNCiAgInRscyI6ICIiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICIiLA0KICAiaW5zZWN1cmUiOiAiMCINCn0=
+hysteria2://f8fbc2cd-b33d-4332-8cc1-3d98ef9f0542@23.95.68.6:22173?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1&mport=22173%2C21000-23000#hy2-racknerd-d4c3555
+tuic://f8fbc2cd-b33d-4332-8cc1-3d98ef9f0542%3Af8fbc2cd-b33d-4332-8cc1-3d98ef9f0542@23.95.68.6:15680?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1&congestion_control=bbr#tu5-racknerd-d4c3555
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+你好！作为一个技术小白，面对VPS和复杂的网络协议确实容易感到头大。别担心，我会一步步手把手教你。
+
+鉴于你的需求（Hysteria-2 + Tuic-v5，指定端口范围，限速，伪装），最适合你的方案是使用 **Sing-box 全家桶脚本**。Sing-box 是目前最先进的内核，能同时完美支持 Hysteria2 和 Tuic v5，且资源占用极低。
+
+### ⚠️ 重要安全提醒
+
+你把 **IP、域名、UUID 和 密码** 都贴出来了，这非常危险！任何人都可以扫描并攻击你的服务器。
+
+  * **本教程仅供教学演示**，我将直接使用你提供的信息生成配置。
+  * **强烈建议**：教程走通后，请务必使用脚本中的“重置用户信息”功能，或者重新安装系统换一套密码/UUID。
+
+-----
+
+### 第一步：准备工作 (SSH连接 VPS)
+
+请在 SSH 窗口中依次输入以下命令，确保 Debian 10 系统是最新的，并安装必要工具。
+
+**1. 更新系统并安装基础工具（复制并回车）：**
+
+```bash
+apt update -y && apt install -y curl wget socat
+```
+
+**2. 开启 BBR 加速（提升网络速度，必做）：**
+
+```bash
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+```
+
+-----
+
+### 第二步：一键安装脚本 (Hysteria2 + Tuic5)
+
+我们将使用社区口碑很好的 Yongge 大佬的 Sing-box 一键脚本。请复制下面这行命令并回车：
+
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+```
+
+**脚本运行后的交互步骤（请严格按照以下说明操作）：**
+
+1.  出现菜单后，输入数字 **1** 选择 `安装 Sing-box`。
+2.  **核心选择**：选择默认的（通常是 Alpha 或 Stable），直接**回车**即可。
+3.  **协议选择**：这里很关键。因为你要 Hysteria2 和 Tuic。
+      * 脚本通常会问你要开启哪些协议。请选择包含 **Hysteria2** 和 **Tuic** 的选项（如果是多选，请输入对应数字开启这两个）。
+      * *建议：* 如果脚本支持 "混合模式" (Reality+Hy2+Tuic)，选这个容错率最高。
+4.  **域名设置**：
+      * 输入你的域名：`uqidc.8881977.xyz`
+      * **注意**：脚本会自动申请证书。如果它问你是否已经解析了域名，选 **Yes/是**。
+5.  **端口设置**：
+      * 脚本可能会随机生成端口。安装完成后，我们稍后可以通过修改配置文件强制改为 `36300`。如果安装过程中允许输入端口，请输入 `36300`。
+6.  **UUID/密码**：
+      * 如果脚本允许自定义，输入你提供的 UUID：`d8f8166a-fb51-4532-82df-c23fa0d7a322`
+      * Hysteria2 密码输入：`12345678`
+
+*(等待脚本跑完，屏幕上会出现一大串节点链接，先不用管，我们还要进行限速设置)*
+
+-----
+
+### 第三步：修改配置 (设置端口和限速 \< 101Mbps)
+
+因为脚本默认不会设置限速，我们需要手动修改 Sing-box 的配置文件。
+
+**1. 编辑配置文件：**
+输入以下命令打开配置：
+
+```bash
+nano /etc/sing-box/config.json
+```
+
+**2. 找到 `inbounds` 部分：**
+你需要找到类型为 `hysteria2` 和 `tuic` 的段落。
+使用键盘方向键移动光标，修改以下两处（如果没有相应的行，请手动在对应的 `{ ... }` 括号内添加）：
+
+**针对 Hysteria2 的修改：**
+
+```json
+{
+    "type": "hysteria2",
+    "listen": "::",
+    "listen_port": 36300, 
+    "up_mbps": 100, 
+    "down_mbps": 100,
+    ...其他原有内容...
+}
+```
+
+*注意：确保 `listen_port` 是 `36300`，并添加了 `up_mbps` 和 `down_mbps` 设置为 100。*
+
+**针对 Tuic 的修改：**
+Tuic 协议本身较难在服务端强制精确限速，建议主要依赖 Hysteria2 的限速。如果你想让 Tuic 也监听在 36300，Sing-box 支持端口复用，但为了稳定，建议 Tuic 设置为 `36301` 或者让它们共用端口（取决于脚本配置方式）。为简单起见，确保 Hysteria2 限速生效即可。
+
+**3. 保存并退出：**
+
+  * 按 `Ctrl + O`，然后回车（保存）。
+  * 按 `Ctrl + X`（退出）。
+
+**4. 重启服务使配置生效：**
+
+```bash
+systemctl restart sing-box
+```
+
+*如果重启报错，说明刚才 JSON 格式改错了（比如少了个逗号），请重新检查。*
+
+-----
+
+### 第四步：获取订阅链接 (直接可用)
+
+基于你提供的信息和上述设置（假设端口设为 36300），以下是为你生成的可以直接使用的节点代码。
+
+#### 1\. v2rayN / Nekobox (复制以下代码从剪贴板导入)
+
+**Hysteria 2 节点:**
+
+```text
+hysteria2://12345678@uqidc.8881977.xyz:36300?peer=uqidc.8881977.xyz&insecure=0&obfs=none&snjq=uqidc.8881977.xyz#Hysteria2-36300
+```
+
+**Tuic v5 节点:**
+
+```text
+tuic://d8f8166a-fb51-4532-82df-c23fa0d7a322:12345678@uqidc.8881977.xyz:36300?peer=uqidc.8881977.xyz&insecure=0&alpn=h3&mode=quic#Tuic5-36300
+```
+
+*(注：如果 Tuic 无法连接，请尝试将端口改为脚本默认生成的端口，或者确保两个协议复用了同一个端口)*
+
+#### 2\. Mihomo / Clash (Meta核心) 配置段
+
+如果你使用 iStoreOS (OpenClash 或 MihomoT)，请使用 **Meta** 内核。在配置文件的 `proxies:` 下方添加：
+
+```yaml
+proxies:
+  - name: "Hysteria2-Limit"
+    type: hysteria2
+    server: uqidc.8881977.xyz
+    port: 36300
+    password: "12345678"
+    sni: uqidc.8881977.xyz
+    skip-cert-verify: false
+    up: 100 Mbps
+    down: 100 Mbps
+    # Hysteria2 协议本身伪装性很强，通常不需要额外混淆，如需开启：
+    # obfs: "salamander"
+    # obfs-password: "your_obfs_password" 
+
+  - name: "Tuic-V5"
+    type: tuic
+    server: uqidc.8881977.xyz
+    port: 36300
+    uuid: "d8f8166a-fb51-4532-82df-c23fa0d7a322"
+    password: "12345678"
+    sni: uqidc.8881977.xyz
+    skip-cert-verify: false
+    alpn: [h3]
+    congestion_controller: bbr
+    udp_relay_mode: native
+```
+
+-----
+
+### 第五步：如何最大程度防止被 GFW 发现 (伪装建议)
+
+你要求“尽可能伪装”，以下是针对 Hysteria2/Tuic 的专业建议：
+
+1.  **端口选择 443**：
+    虽然你要求了 `36300` 范围，但 **443 端口** 是 HTTPS 流量的标准端口。Hysteria2 伪装成 HTTP/3 流量。如果用 443 端口，GFW 会认为你是在正常访问一个开启了 HTTP/3 的 HTTPS 网站，伪装效果 **最好**。
+
+      * *如果你愿意改为 443*：请在第三步修改配置文件时，将 `listen_port` 改为 `443`。
+
+2.  **Hopping (端口跳跃)**：
+    Hysteria2 支持端口跳跃，这是防封的大杀器。
+    在服务端配置中（第三步），你可以这样设置端口范围：
+    `"listen_port": 36300` (主端口)
+    但客户端连接时，可以指定一个范围。
+
+      * *操作*：这需要防火墙放行 `36300-37300`。
+      * 在 Linux 终端执行：`iptables -I INPUT -p udp --dport 36300:37300 -j ACCEPT`
+
+3.  **真实网站伪装**：
+    你目前的域名 `uqidc.8881977.xyz` 打开应该是一个空白页或 403 错误。建议在这个 VPS 上安装一个简单的 Nginx，放一个静态网页（比如个人博客或英文介绍页），让 HTTP (80) 和 HTTPS (443 TCP) 看起来像个正常的网站。Sing-box 脚本通常只处理 UDP 流量，TCP 流量若没有 fallback 会显得可疑。
+
+### 总结你现在能做的下一步：
+
+建议你先**完全复制第二步的脚本命令**去安装。安装成功后，如果 v2rayN 能够连接，再尝试去修改文件进行限速。如果遇到任何连接问题，通常是防火墙没开端口，记得去 VPS 提供商的后台面板（网页端）检查防火墙是否放行了 UDP 36300 端口。
