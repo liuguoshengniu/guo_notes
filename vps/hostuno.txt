@@ -1,0 +1,390 @@
+#如果你刚重装完Ubuntu 22.04 64 Bit，我建议你执行这一套“丝滑操作”：
+# 1. 更新并升级所有软件包（耗时约1-2分钟）
+apt update && apt upgrade -y
+# 2. 安装必备的工具包
+apt install -y curl wget jq socat screen bayer git
+# 3. 如果提示需要重启（刚才看到的 System restart required），立即重启
+reboot
+#结束
+；4. 关于 REALITY 的额外提醒
+既然你准备安装 REALITY 协议：
+
+内核版本：Ubuntu 22.04 自带的 5.15+ 内核已经完美支持 BBR（网络加速）。你不需要再安装额外的 BBR 脚本，只需开启它即可：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+；
+防火墙：Ubuntu 默认可能开启了 ufw。如果你发现脚本装好了但连不上，记得运行 ufw disable 或者手动放行端口。
+;-------------------------------------------------------------------------------------
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+；---------------------------------------------------
+卢广在R2S部署istoreos（192.168.100.2）双口路由器(2025-05-46)
+远程访问：https://istorelu.8881977.xyz/
+远程访问卢广：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://istorelu.8881977.xyz/
+;
+远程访问：https://r2s.8881977.xyz（192.168.100.4）
+远程访问guo_R2S：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://r2s.8881977.xyz
+;--------------------------------------------------------------------
+
+没有root权限的Ubuntu系统 VPS的IP:213.189.58.89、已托管CF的解析域名：uno.356765.xyz、端口：57000(hostuno的s2.hostuno.com)如何使用域名、免费Cloudflare服务项目的 https、TLS加密等，产生服务端hysteria2代理节点？，请提供具体详细操作步骤。
+
+hostuno
+网址：https://www.hostuno.com
+优惠码：FORUM50
+SERV00的收费版本购买了一年的START1（2025年04月20日至2026年04月19日）
+到期没有必要续费，用另外一个邮箱重新注册一个账号后，又可以使用优惠码：FORUM50，6.15EUR/年：https://payments.hostuno.com/payments/order/register/hostUNO.com/START1
+
+注册：shengtony88@gmail.com
+DevilWEB webpanel:	
+https://panel2.hostuno.com/
+Login:	
+tony88-2504
+Password:	(原密码：vP6HS@gD70nltWVpK5MR）
+Tony1234/
+
+Account type:	
+START1
+SSH/SFTP server address:	s2.hostuno.com
+Home directory:			/usr/home/tony88-2504
+----------------------------------------------------------------------------------------
+[慎用]serv00 恢复初始化：
+运行下列代码，按提示，进行初始化：
+bash <(curl -Ls https://raw.githubusercontent.com/frankiejun/serv00-play/main/start.sh)
+https://github.com/yonggekkk/sing-box-yg
+Free subdomain:		https://tony88-2504.useruno.com/
+--------------------------------------------------------------------------------------------
+当前客户端正在使用的IP：213.189.58.89
+如默认节点IP被墙，可在客户端地址更换以下其他IP
+213.189.54.223
+213.189.58.89
+213.189.54.237
+CDN：uno237.356765.xyz (shengtony88@gmail.com)
+
+当前各协议正在使用的端口如下
+vless-reality端口：11610
+Vmess-ws端口(设置Argo固定域名端口)：14488
+Hysteria2端口：55343
+
+
+当前各协议正在使用的端口如下
+vless-reality端口：51402
+Vmess-ws端口(设置Argo固定域名端口)：49736
+
+Hysteria2端口：56456
+
+UUID密码：451feecf-8e94-4178-9cc0-bc0a217bc405g
+
+Argo域名：unozt.356765.xyz	(shengtony88@gmail.com,Tonyguoniu4!)
+cloudflared tunnel run --token eyJhIjoiZGVjNDNjNzk4ZWI5M2Q5MzkzNTM1NTBmODc1ZjM5YTQiLCJ0IjoiYmI5Mjc0ZmItY2FjYy00MmRlLWJkMjYtNTNiNmM5MWE3OTg3IiwicyI6Ik9XSmlaREV5TXpFdE1UQXlZeTAwWTJNeExXSmxPRGd0TldZeU5tTmxaamd4TmpJeCJ9
+
+--------------------------------------------------------
+域名或VPS到期前提醒续期：
+https://guotime.6.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/admin
+http://guotime.g66.indevs.in/admin（停止了）
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+Tony1234/
+
+---------------------------------------------------
+hostuno可用一键部署节点有一下几个：
+1、https://github.com/yonggekkk/sing-box-yg	（无tuic节点,可清空hostuno）
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+;okokokokokokokokokokokokokokok
+	bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+;okokokokokokokokokokokokokokok
+2、https://github.com/eooce/Sing-box		（有tuic节点）
+	bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sb_serv00.sh)
+3、https://github.com/frankiejun/serv00-play	（无tuic节点，可清空hostuno）
+	bash <(curl -Ls https://raw.githubusercontent.com/frankiejun/serv00-play/main/start.sh)
+4、https://set-out8.blogspot.com/2025/01/serv00-x-ui.html（可自己选择端口，2025最新Serv00部署X-UI面板）
+	wget -O x-ui.sh -N --no-check-certificate https://raw.githubusercontent.com/Setout8/x-ui-freebsd/main/x-ui.sh && chmod +x x-ui.sh && ./x-ui.sh
+5、支持一键三协议：vless-reality、vmess-ws(argo)、hysteria2，且增加reality协议默认支持 CF vless/trojan 节点的proxyip以及非标端口的优选反代IP功能。
+	五个节点安装脚本（可自己选择端口）:
+	bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/Cloudflare_vless_trojan/main/serv00_proxyip.sh)
+=========================================================================
+当前运行：
+bash <(curl -Ls https://raw.githubusercontent.com/frankiejun/serv00-play/main/start.sh)   
+#bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00.sh)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+===============================================================================当前客户端正
+213.189.58.89
+213.189.54.237
+213.189.54.223
+请输入上面三个IP中的任意一个 (建议默认回车自动选择可用IP): 
+你选择的IP为: 213.189.54.223
+
+当前各协议正在使用的端口如下
+你的vless-reality端口: 52069
+你的vmess-ws端口(设置Argo固定域名端口): 60816
+你的hysteria2端口: 52894
+
+
+UUID密码：950ba594-d7cc-4db7-856c-a959a9bf7431
+
+Argo域名：unozt.356765.xyz
+-------------------------------------------------------------------------------------------------
+
+一、Vless-reality分享链接如下：
+vless://451feecf-8e94-4178-9cc0-bc0a217bc405@213.189.58.89:11610?encryption=none&flow=xtls-rprx-vision&security=reality&sni=tony88-2504.useruno.com&fp=chrome&pbk=E5HxL0VUKoWRw4j91x2sbO_sZ-VVey2qWvRhCaxrO2Y&type=tcp&headerType=none#s2-reality-tony88-2504
+
+注意：如果之前输入的reality域名为CF域名，将激活以下功能：
+可应用在 https://github.com/yonggekkk/Cloudflare_vless_trojan 项目中创建CF vless/trojan 节点
+1、Proxyip(带端口)信息如下：
+方式一全局应用：设置变量名：proxyip    设置变量值：213.189.58.89:11610  
+方式二单节点应用：path路径改为：/pyip=213.189.58.89:11610
+CF节点的TLS可开可关
+CF节点落地到CF网站的地区为：213.189.58.89所在地区
+
+2、非标端口反代IP信息如下：
+客户端优选IP地址为：213.189.58.89，端口：11610
+CF节点的TLS必须开启
+CF节点落地到非CF网站的地区为：213.189.58.89所在地区
+
+注：如果Serv00/Hostuno的IP被墙，proxyip依旧有效，但用于客户端地址的非标端口反代IP将不可用
+注：可能有大佬会扫Serv00/Hostuno的反代IP作为其共享IP库或者出售，请慎重将reality域名设置为CF域名
+-------------------------------------------------------------------------------------------------
+
+
+四、聚合通用节点，共计22个节点：
+3个IP全覆盖：3个reality、3个vmess+ws、3个hy2
+13个argo节点全覆盖 (已添加CF不死IP)：7个关tls 80系端口节点、6个开tls 443系端口节点
+订阅分享链接：
+https://tony88-2504.useruno.com/950ba594-d7cc-4db7-856c-a959a9bf7431_v2sub.txt
+;
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/g1NCqd7
+SingBox Link:
+https://clash.mcx.qzz.io/b/g1NCqd7
+Clash Link:
+https://clash.mcx.qzz.io/c/g1NCqd7
+Surge Link:
+https://clash.mcx.qzz.io/s/g1NCqd7
+自定义路径
+;
+五、查看Sing-box与Clash-meta的订阅配置文件，请进入主菜单选择4
+Clash-meta订阅分享链接：
+https://tony88-2504.useruno.com/950ba594-d7cc-4db7-856c-a959a9bf7431_clashmeta.txt
+Sing-box订阅分享链接：
+https://tony88-2504.useruno.com/950ba594-d7cc-4db7-856c-a959a9bf7431_singbox.txt
+
+-------------------------------------------------------------------------------------------------
+
+三、HY2分享链接如下：
+hysteria2://950ba594-d7cc-4db7-856c-a959a9bf7431@213.189.54.223:52894?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504
+hysteria2://950ba594-d7cc-4db7-856c-a959a9bf7431@213.189.58.89:52894?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504-213.189.58.89
+hysteria2://950ba594-d7cc-4db7-856c-a959a9bf7431@213.189.54.237:52894?sni=www.bing.com&alpn=h3&insecure=1&allowInsecure=1#s2-hy2-tony88-2504-213.189.54.237
+;
+UNOs2_hy2
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/aiy8g6I
+SingBox Link:
+https://clash.mcx.qzz.io/b/aiy8g6I
+Clash Link:
+https://clash.mcx.qzz.io/c/aiy8g6I
+Surge Link:
+https://clash.mcx.qzz.io/s/aiy8g6I
+自定义路径
+-------------------------------------------------------------------------------------------------
+VMess(无hy2):
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/fILUjOH
+SingBox Link:
+https://clash.mcx.qzz.io/b/fILUjOH
+Clash Link:
+https://clash.mcx.qzz.io/c/fILUjOH
+Surge Link:
+https://clash.mcx.qzz.io/s/fILUjOH
+自定义路径
+-------------------------------------------------------------------------------------------------
+vmess生成更多优选IP的节点：
+
+
+；-------------------------------------------------------------------------
+六、vmess-ws(tls)+Argo节点通过以下优选又生成更多优选IP的节点：
+教学：https://www.youtube.com/watch?v=fmEf6kd_0uY
+https://mliaomcx.com/%e3%80%8aracknerd-%e7%a7%92%e5%8f%98%e5%85%89%e9%80%9f%ef%bc%81%e7%94%a8-cloudflare-%e4%bc%98%e9%80%89-ip-%e4%b8%80%e9%94%ae%e6%8f%90%e9%80%9f%e4%b8%a4%e5%80%8d%ef%bc%8cyoutube-8k/，中的：
+Vmess节点配套优选工具:
+节点聚合工具：
+https://clash.mcx.qzz.io/
+
+；------------------------------------------------------------------------------------------------------------------------------
+优选cloudflare IP(C1901房）:
+172.64.156.15
+104.16.146.92
+104.16.144.15
+104.16.242.148
+172.64.155.24
+172.64.159.201
+104.17.62.140
+vmess-argo优选域名:
+Cm.Soso.Edu.Kg
+Sub.Cmliussss.Net
+Owo.O00o.Ooo
+https://mrxn.net/BESTCFDOMAIN
+ip.sb
+freeyx.cloudflare88.eu.org
+cf.090227.xyz
+cf.877774.xyz
+cf.877771.xyz 
+cdns.doon.eu.org
+cf.zhetengsha.eu.org
+time.is
+japan.com
+www.wto.org
+www.web.com
+www.visa.com
+cloudflare-ech.com
+usa.visa.com
+myanmar.visa.com
+节点聚合工具：
+https://clash.mcx.qzz.io/
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+------------------------------------------------------------------------------------------------
+节点聚合工具：
+https://clash.mcx.qzz.io/
+各种协议：
+Vmess_tls节点优化：
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/S0dlJMC
+SingBox Link聚合:
+https://clash.mcx.qzz.io/b/S0dlJMC
+CLASH:
+短连接：
+https://clash.mcx.qzz.io/c/S0dlJMC
+长连接：
+#222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+第二种产生节点方案：
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+以下是申请的域名：
+申请的域名
+--------------------------------------------------------------------------
+申请了1个付费域名
+CF托管：s1988liu@gmail.com
+Tony1234/
+https://ap.www.namecheap.com/Domains/DomainControlPanel/s1988liu.cfd/domain/
+一年期2026年3月7日到期
+域名:s1988liu.cfd
+-----------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+s1988liu@gmail.com
+登录用户名：s1988liu
+Tony1234!
+十年期2035年3月16日到期
+付费域名：978668.xyz
+已经托管到cloudflare(注册：s1988liu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+liuguoshengniu@gmail.com
+登录用户名：shengniu
+Tony1234/
+十年期2035年10月3日到期
+付费域名：8881977.xyz
+已经托管到cloudflare(注册：liuguoshengniu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+shengtony88@gmail.com
+登录用户名：shengtony88356765
+Tony1234!
+十年期2035年3月12日到期
+付费域名：356765.xyz
+已经托管到cloudflare(注册：shengtony88@gmail.com)
+--------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare（s1988niu@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login（账户：s1988niu@gmail.com）
+1、s1988niu.x10.bz
+2、s1988niu.x10.mx
+3、s1988niu.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare账户:(liuguosheng12345@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login
+Tony1234!  or /
+1、sheng123456.x10.bz
+2、sheng123456.x10.mx
+3、sheng123456.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtony88@gmail.com的github申请的
+Tony1234!
+1、 shengtony88.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+2、sheng202504.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+--------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过s1988niu@gmail.com的github申请的
+Tony1234!
+1、s1988niu.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+2、guo202504.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+-------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-09,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtonyliu@gmail.com的github申请的
+Tony1234!(或/)
+1、shengtonyliu.dpdns.org（已经绑定到用shengtonyliu@gmail.com注册的CF）
+
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每年续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234!
+1、 sheng123456.dpdns.org（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-01,OKOKOKOKOKOKOKOK
+需要y一年有效期：2026-10-01
+https://customer.l53.net/order/service/manage/119802
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234/
+1、 guol53.ggff.net（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+
+
+
+passwall升级开源项：
+https://naiyous.com/7473.html#google_vignette
+# 进入安装包所在目录
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip passwall_packages_ipk_aarch64_generic.zip
+#unzip passwall_packages_ipk_aarch64_cortex-a53.zip
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+#保留原有配置
+rm /usr/share/passwall/rules/proxy_host-opkg
+
+
+
