@@ -1,0 +1,170 @@
+cat <<EOF | sudo tee /etc/mihomo/config.yaml
+# 基础配置
+mixed-port: 7890
+allow-lan: true
+log-level: info
+ipv4: true
+ipv6: false
+
+#chatgpt建议的
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+#chatgpt建议的
+
+external-controller: 0.0.0.0:9090
+external-ui: ui
+secret: "123456"
+
+# DNS 配置
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+ # enhanced-mode: redir-host    #chatgpt建议的，但死机
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver: [223.5.5.5, 119.29.29.29]
+  default-nameserver: [223.5.5.5]
+
+# 订阅源配置 (6个已填，4个预留)
+proxy-providers:
+  airport_01:
+    type: http
+    url: "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fshn.s1988.us.ci%2Fc67cfbf0-552b-477c-b567-2958731109c3%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
+    interval: 3600
+    path: ./provider_01.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  airport_02:
+    type: http
+    url: "https://clash.mcx.qzz.io/c/ps8cQSw"
+    interval: 3600
+    path: ./provider_02.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  airport_03:
+    type: http
+    url: "https://clash.mcx.ezz.iz/c/lhYgF3J"
+    interval: 3600
+    path: ./provider_03.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  airport_04:
+    type: http
+    url: "https://de5p.pages.dev/80aea886-e02a-4864-9ea1-07c19a3d6e4b/sub?target=clash"
+    interval: 3600
+    path: ./provider_04.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  airport_05:
+    type: http
+    url: "https://sub.ssss.xx.kg/clash?config=https://ss.s1977.indevs.in/sub/tony1234"
+    interval: 3600
+    path: ./provider_05.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  airport_06:
+    type: http
+    url: "https://xyzbpb.g55.indevs.in/sub/normal/91fd451e-1653-451b-a775-7302bddfef71?app=clash"
+    interval: 3600
+    path: ./provider_06.yaml
+    health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
+
+  # --- 预留位 07-10 ---
+  airport_07: {type: http, url: "http://127.0.0.1/empty", interval: 3600, path: ./provider_07.yaml, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}}
+  airport_08: {type: http, url: "http://127.0.0.1/empty", interval: 3600, path: ./provider_08.yaml, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}}
+  airport_09: {type: http, url: "http://127.0.0.1/empty", interval: 3600, path: ./provider_09.yaml, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}}
+  airport_10: {type: http, url: "http://127.0.0.1/empty", interval: 3600, path: ./provider_10.yaml, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}}
+
+# 策略组配置
+proxy-groups:
+  - name: 🚀 全球加速 (总开关)
+    type: select
+    proxies:
+      - ⚡ 自动选择 (全机场最优)
+      - 🛡️ 机场01-优选
+      - 🛡️ 机场02-优选
+      - 🛡️ 机场03-优选
+      - 🛡️ 机场04-优选
+      - 🛡️ 机场05-优选
+      - 🛡️ 机场06-优选
+      - 🛡️ 机场07-优选
+      - 🛡️ 机场08-优选
+      - 🛡️ 机场09-优选
+      - 🛡️ 机场10-优选
+      - 🔰 手动挑选全部节点
+      - DIRECT
+
+  - name: ⚡ 自动选择 (全机场最优)
+    type: url-test
+    use: [airport_01, airport_02, airport_03, airport_04, airport_05, airport_06, airport_07, airport_08, airport_09, airport_10]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  - name: 🛡️ 机场01-优选
+    type: url-test
+    use: [airport_01]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场02-优选
+    type: url-test
+    use: [airport_02]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场03-优选
+    type: url-test
+    use: [airport_03]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场04-优选
+    type: url-test
+    use: [airport_04]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场05-优选
+    type: url-test
+    use: [airport_05]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场06-优选
+    type: url-test
+    use: [airport_06]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场07-优选
+    type: url-test
+    use: [airport_07]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场08-优选
+    type: url-test
+    use: [airport_08]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场09-优选
+    type: url-test
+    use: [airport_09]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🛡️ 机场10-优选
+    type: url-test
+    use: [airport_10]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: 🔰 手动挑选全部节点
+    type: select
+    use: [airport_01, airport_02, airport_03, airport_04, airport_05, airport_06, airport_07, airport_08, airport_09, airport_10]
+
+# 分流规则
+rules:
+  - GEOIP,lan,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 全球加速 (总开关)
+EOF
+
+# 重启服务使配置生效
+sudo systemctl restart mihomo
