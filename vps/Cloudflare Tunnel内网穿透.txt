@@ -1,0 +1,163 @@
+Cloudflare Tunne 与ISTOREOS（192.168.100.5）间如何建立多条内网穿透，如：192.168.100.5:3001、192.168.100.5:9090，其中：192.168.100.5:3001已经通了（xxx.g55.indevs.in）,现在想增加穿透192.168.100.5:9090，步骤？
+; 
+一、Cloudflare Tunnel内网穿透
+OpenWrt软路由最简单的远程访问教程 | Cloudflare Tunnel零成本内网穿透
+教学：https://www.youtube.com/watch?v=EHRVZ-DheDo
+;tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+1、
+卢广在R2S部署istoreos（192.168.100.2）双口路由器(2025-05-46)
+远程访问：https://istorelu.8881977.xyz/
+远程访问卢广：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://istorelu.8881977.xyz/
+;tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+2、R2S国生
+cloudflared tunnel run --token :
+eyJhIjoiMDU0MTI3NzFmNmY5YjUxZWUzYWY5NTZkYjcyMDYzYmMiLCJ0IjoiNTAxNjkyNGUtMjg2OC00NjRjLWE0YWQtNmMyMGMwYjM4MDZiIiwicyI6IlpUazVORGRqTlRRdE56SXdPQzAwTmpGbExUZzBaRE10TkdZeE1tRm1NR0UwTWpjMCJ9
+；--------------------------------------------------------------------------------------------------------
+tunnel: r2s
+credentials-file: /root/.cloudflared/b70dcd06-f212-4551-917d-a1c2f170d339.json
+
+ingress:
+  - hostname: r2s.8881977.xyz
+    service: http://192.168.100.4:80
+  - service: http_status:404
+；--------------------------------------------------------------------------------------------------------
+可通过：
+ r2s.8881977.xyz
+远程打开R2S_istoreOS
+;tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+
+通用config.yml模板：
+；--------------------------------------------------------------------------------------------------------
+tunnel: 6ff42ae2-765d-4adf-8112-31c55c1551ef
+credentials-file: /root/.cloudflared/6ff42ae2-765d-4adf-8112-31c55c1551ef.json
+
+ingress:
+  - hostname: gitlab.widgetcorp.tech
+    service: http://localhost:80
+  - hostname: gitlab-ssh.widgetcorp.tech
+    service: ssh://localhost:22
+  - service: http_status:404
+；--------------------------------------------------------------------------------------------------------
+ 二、DDNSTO远程控制（istoreOS服务栏目中）内网穿透
+
+OEC的token：
+4a1edba4-67da-4dcb-9149-a6aa02206bef
+管理端（是niuusa2025微信登录的）：
+https://web.ddnsto.com/app/#/devices
+192.168.100.5（OEC_RK3566）远程：
+https://oecistoreos.gd.ddnsto.com:443
+;--------------------------------------------------------------------
+三、txt转voice和OEC istoreOS内网穿透
+cloudflared tunnel run --token eyJhIjoiYjVlY2ZkY2Q2MDI0ODFiMTc4NzAzNjk5MjVmMjk4YzMiLCJ0IjoiOTFjNWVjMWItNmFmYS00MDM5LThhMTgtZGE2NjJhMDNhMzcxIiwicyI6IlptWmlOV0kyT0RVdE5XRXdOQzAwWmpJekxXSmxNamt0TXpnM09ERTFPR0V6T1RVNCJ9
+；
+1、将TXT文本转语音
+https://www.youtube.com/watch?v=avVyf4PYCYA
+https://github.com/cosin2077/easyVoice
+istoreOS应用入口
+192.168.100.5:3001
+https://txv.g55.indevs.in/
+===================================
+2、可通过：已经托管到cloudflare(注册：shengtony22@gmail.com,Tony1234!guo)
+oecis.888812345.xyz
+远程打开OEC_istoreOS(192.168.100.5)
+;
+open clash节点管理控制台：
+https://oecis.888812345.xyz/ui/metacubexd/#/
+密码：tony1234
+======================================
+3、飞牛NAS
+https://fnos.888812345.xyz
+;===========================
+4、ASUS AX6000
+https://guoax6000.gd.ddnsto.com:443
+Webdav服务	未运行
+Webdav地址	未启用
+端口 :	
+3303
+授权用户名:rootguo	
+授权用户密码:Tony1234/	
+共享磁盘 *	
+______
+;------------------------------------------------
+OKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOK
+在Vrarecloud_VPS部署wireguard内网穿透：OKOKOKOKOKOKOKOKOKOKOK
+;
+Vrarecloud_PS注册信息
+机器参数：
+产品名称：Starter KVM
+Processor: 1 vCPU
+Memory: 1GB RAM
+Storage: 25GB NVMe
+Bandwidth: 3TB /month
+1x IPv4 & /112 IPv6 Subnet
+;-------------------------------------------------------------------------------------------------
+这是2025年12月31日星期三发出的发票V4V​​-10002的付款收据:
+
+入门级 KVM - guohk.com (2025年12月31日 - 2026年12月30日) €29.50
+是否自动安装 VPN 软件：否 自动安装
+地区：香港
+优惠码：BF25ALLDAYSTARTER（购买：https://rarecloud.io/clients/cart.php?a=confproduct&i=1）
+小计：€10.91（支付宝）
+信用额度：€0.00
+总计：€10.91
+金额：10.91欧元
+交易号：py_3SkKrfGoRMjOtaNJ1xLneszt
+已付总额：10.91欧元
+剩余余额：0.00欧元
+状态：已付款
+您可随时登录客户专区查看您的发票历史记录。
+注意：此邮件将作为此次付款的正式收据。
+RareCloud.io
+https://rarecloud.io
+;-------------------------------------------------------------------------------
+https://rarecloud.io/clients/cart.php?a=complete
+liuguoshengguo@gmail.com Tony1234!guo
+https://rarecloud.io/clients/clientarea.php?action=services
+Tony1234/
+订单确认
+您的订单号是：7527862450
+如果您对订单有任何疑问，请从您的客户区提交支持工单并提供您的订单号。
+控制面板：
+https://panel.rarecloud.io/sessx1IAiXIE3P5qdN1K/index.php?#act=listvs&
+密码：)tFhYV)N%21b
+;
+部署部署wireguard内网穿透的SSH 访问信息：
+=============================
+IPV6:2a06:a880:0006:458f:0000:0000:0000:0001
+主 IP 地址：85.121.51.103
+服务器名称：root
+Root 密码：Tony1234/
+另外一种WireGuard内网穿透：！！！没有部署成功
+https://www.youtube.com/watch?v=GYctbicJ67Y
+https://naiyous.com/10221.html
+CF:xyzbpb@888812345.xyz,Tony1234!guo
+用于申请证书的邮箱（Let's Encrypt 邮箱）: shengtony22@gmail.com
+wire.g55.indevs.in
+WireGuard 监听端口：38234
+全部步骤已完成，对应你的文档流程：
+  1）安装 Docker
+  2）在 /etc/docker/containers/caddy 下配置 Caddy + Caddyfile
+  3）在 /etc/docker/containers/wg-easy 下配置 wg-easy
+
+请确认：
+  - 云服务商安全组 / 本机防火墙，已放行 UDP 端口：38234
+  - 域名 wire.g55.indevs.in 已正确解析到当前服务器公网 IP
+
+现在可以在浏览器中访问（证书签发可能需要几十秒）：
+  https://wire.g55.indevs.in
+
+首次打开 wg-easy Web 面板时：
+  - 按页面提示设置管理密码
+  - 在安装向导中：主机填 wire.g55.indevs.in，端口填 38234
+
+后续如果要按文档那样“更新 wg-easy”，可执行：
+  cd /etc/docker/containers/wg-easy
+  docker compose pull
+  docker compose up -d
+=============================================
+Vrarecloud_VPS
+部署wireguard内网穿透管理界面：
+https://wire.g55.indevs.in/setup/2
+admin
+Tony1234/guo
