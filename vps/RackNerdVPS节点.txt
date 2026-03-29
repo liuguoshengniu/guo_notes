@@ -1,0 +1,354 @@
+https://www.racknerd.com/BlackFriday/
+卢广在R2S部署istoreos（192.168.100.2）双口路由器(2025-05-46)
+远程访问：https://istorelu.8881977.xyz/
+远程访问卢广：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://istorelu.8881977.xyz/
+公网穿透地址(用无痕模式)：
+https://metalu.8881977.xyz/ui/metacubexd/#/
+后端地址OK(用无痕模式)：
+https://metalu.8881977.xyz
+;
+https://r2s.8881977.xyz/
+公网穿透地址(用无痕模式)：
+https://r2sr.8881977.xyz/ui/metacubexd/#/
+后端地址(用无痕模式)：
+https://r2sr.8881977.xyz
+;
+;--------------------------------------------------------------------
+#okokokokokokokokoOKOKOKOKOKOKOK
+#如果你刚重装完Ubuntu 22.04 64 Bit，我建议你执行这一套“丝滑操作”：
+# 1. 更新并升级所有软件包（耗时约1-2分钟）
+apt update && apt upgrade -y
+# 2. 安装必备的工具包
+apt install -y curl wget jq socat screen git bc lsof
+OR:
+apt install -y curl wget jq socat screen bayer git
+# 3. 如果提示需要重启（刚才看到的 System restart required），立即重启
+reboot
+#结束
+#okokokokokokokokoOKOKOKOKOKOKOK
+；4. 关于 REALITY 的额外提醒
+既然你准备安装 REALITY 协议：
+
+内核版本：Ubuntu 22.04 自带的 5.15+ 内核已经完美支持 BBR（网络加速）。你不需要再安装额外的 BBR 脚本，只需开启它即可：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+；
+防火墙：Ubuntu 默认可能开启了 ufw。如果你发现脚本装好了但连不上，记得运行 ufw disable 或者手动放行端口。
+;-------------------------------------------------------------------------------------
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+；---------------------------------------------------
+；
+域名或VPS到期前提醒续期：
+https://guotime.guo20251004.dpdns.org/admin
+http://guotime.g66.indevs.in/admin（停止了）
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+；
+2026-03-11完成续费，到期日2027-03-13
+新帳單 #18169691
+https://my.racknerd.com/viewinvoice.php?id=18169691&paysuccess=1
+我的面板：
+https://my.racknerd.com/clientarea.php?action=productdetails&id=434338
+；---------------------------------------------------
+
+购买：
+https://my.racknerd.com/cart.php?a=confproduct&i=2
+https://afeinet.blogspot.com/2024/10/24.html
+；管理该VPS:
+https://afeinet.blogspot.com/2024/10/24.html
+搭建完后，放行端口
+ufw allow 29576
+在R2S部署istoreos_lu（192.168.100.7）
+
+$----------------------------------------------------------------------------------------------------------------
+#购买的第2个VPS(教学：https://www.youtube.com/watch?v=zXzMjsRMDlE)
+续费：https://my.racknerd.com/viewinvoice.php?id=18169691
+公司网站：https://www.racknerd.com/
+以及申请流量翻倍：https://lowendtalk.com/  （https://www.youtube.com/watch?v=4aIARo1r5xM）
+注册：liuguosheng1988@gmail.com
+Tony1234/
+;
+域名的公司：https://www.namecheap.com/hosting/
+2026-03-11又VPS续费了一年期，2027年3月13日到期
+1GB KVM VPS 特惠（LEB 专属）（服务器标签：RN1-lu）
+https://mail.google.com/mail/u/0/?ogbl#inbox/FMfcgzQZTgThTtXvlShXrJhpjGxmPhxF
+;
+IPV4地址：23.95.68.6   rn1.356765.xyz
+用户名：root
+SSH 端口 22
+Root 密码：
+T81J2NvdBbElj169Uy
+;
+https://nerdvm.racknerd.com/
+用户名： vmuser223782
+密码：：Tony1234/（如果您已经可以访问上述控制面板，请使用您现有的密码）
+ ;
+SSH命令：
+放行 端口：
+ufw allow 13156
+关闭防火墙/放行端口：
+sudo ufw disable
+
+#---------------------------------------------------------------------------------------------------
+优选cloudflare IP：
+https://set-out8.blogspot.com/2024/12/preferred-ip.html
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SSH命令：
+放行 端口：
+ufw allow 13156
+关闭防火墙/放行端口：
+sudo ufw disable
+UUID密码在线生成器：https://1024tools.com/uuid
+当前 Sing-box 最新测试版内核：1.12.0-beta.1 (可切换)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+运行：
+bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+	(https://github.com/eooce/Sing-box)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+（VPS专用:https://github.com/yonggekkk/sing-box-yg）
+3、Sing-box 全家桶：
+https://github.com/fscarmen/sing-box
+目前运行的：		
+bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+生成以下节点信息：
+🚀VPS状态如下：
+系统:Ubuntu 22.04.1 LTS  内核:5.15.0  处理器:amd64  虚拟化:kvm  BBR算法:bbr
+本地IPV4地址：23.95.68.6   本地IPV6地址：无IPV6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+代理IP优先级：IPV4优先出站(23.95.68.6)CF_CDN:    rn1.888812345.xyz，shengtony22@gmail.com,Tony1234!guo
+
+域名证书申请成功或已存在！域名证书（cert.crt）和密钥（private.key）已保存到 /root/ygkkkca文件夹内
+公钥文件crt路径如下，可直接复制
+/root/ygkkkca/cert.crt
+密钥文件key路径如下，可直接复制
+/root/ygkkkca/private.key
+Vless-reality的SNI域名默认为 apple.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rn1zt.8881977.xyz
+cloudflared.exe service install :
+eyJhIjoiMDU0MTI3NzFmNmY5YjUxZWUzYWY5NTZkYjcyMDYzYmMiLCJ0IjoiZTRiNWIyMDUtYmUyYi00NmRlLWJlY2YtZGVhOGE2NzA1ZTQyIiwicyI6IlpUbG1aamxtTkRndE9EZ3dNeTAwWlRZd0xUZzNNbVF0WWpRM056VmlZMkl3Tm1NNCJ9
+；
+UUID:
+cb1d445d-cb5d-401f-a1e5-54a58e6259a0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sing-box节点关键信息、已分流域名情况如下：
+🚀【 Vless-reality 】端口:29537  Reality域名证书伪装地址：apple.com
+🚀【 Vmess-ws-tls  】端口:2053   证书形式:TLS开启   Argo状态:不支持开启
+🚀【  Hysteria-2   】端口:43667  证书形式:域名证书  转发多端口: 43667,45000:46000
+🚀【    Tuic-v5    】端口:11474  证书形式:域名证书  转发多端口: 未添加
+🚀【    Anytls     】端口:38826  证书形式:域名证书
+;----------------------------------------------------------------------------------------------------------------------------------
+passwall配置中tuic节点需要重新补填写：密码和ID.************************
+
+🚀【 聚合节点 】节点信息如下：
+
+分享链接
+vless://76f831c8-cce4-4a30-a83e-338913ee0d97@23.95.68.6:29537?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=HsBYaRISAOV8NUi8JkxuXMCXo9JtaYngGmcuz1uzlC4&sid=477965f7&type=tcp&headerType=none#vl-reality-RN1-lu
+vmess://eyJhZGQiOiJybjEuODg4ODEyMzQ1Lnh5eiIsImFpZCI6IjAiLCJob3N0Ijoicm4xLjg4ODgxMjM0NS54eXoiLCJpZCI6Ijc2ZjgzMWM4LWNjZTQtNGEzMC1hODNlLTMzODkxM2VlMGQ5NyIsIm5ldCI6IndzIiwicGF0aCI6Ijc2ZjgzMWM4LWNjZTQtNGEzMC1hODNlLTMzODkxM2VlMGQ5Ny12bSIsInBvcnQiOiIyMDUzIiwicHMiOiJ2bS13cy10bHMtUk4xLWx1IiwidGxzIjoidGxzIiwic25pIjoicm4xLjg4ODgxMjM0NS54eXoiLCJmcCI6ImNocm9tZSIsInR5cGUiOiJub25lIiwidiI6IjIifQo=
+hysteria2://76f831c8-cce4-4a30-a83e-338913ee0d97@rn1.888812345.xyz:43667?security=tls&alpn=h3&insecure=0&mport=43667,43667,45000-46000&sni=rn1.888812345.xyz#hy2-RN1-lu
+tuic://76f831c8-cce4-4a30-a83e-338913ee0d97:76f831c8-cce4-4a30-a83e-338913ee0d97@rn1.888812345.xyz:11474?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=rn1.888812345.xyz&allow_insecure=0&allowInsecure=0#tu5-RN1-lu
+anytls://76f831c8-cce4-4a30-a83e-338913ee0d97@rn1.888812345.xyz:38826?&sni=rn1.888812345.xyz&allowInsecure=0#anytls-RN1-lu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;
+添加了cf ws-tls，修改了hy2和tuic的地址为直接IP:23.95.68.6 :
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/ps8cQSw
+SingBox Link:
+https://clash.mcx.qzz.io/b/ps8cQSw
+Clash Link:
+https://clash.mcx.qzz.io/c/ps8cQSw
+Surge Link:
+https://clash.mcx.qzz.io/s/ps8cQSw
+;
+
+VMess_CF:
+
+;
+
+-----------------------------------------------------------------------------------------------------------------------------
+vmess-ws(tls)+Argo节点通过以下优选又生成更多优选IP的节点：
+教学：https://www.youtube.com/watch?v=fmEf6kd_0uY
+https://mliaomcx.com/%e3%80%8aracknerd-%e7%a7%92%e5%8f%98%e5%85%89%e9%80%9f%ef%bc%81%e7%94%a8-cloudflare-%e4%bc%98%e9%80%89-ip-%e4%b8%80%e9%94%ae%e6%8f%90%e9%80%9f%e4%b8%a4%e5%80%8d%ef%bc%8cyoutube-8k/，中的：
+bash <(curl -l -s https://raw.githubusercontent.com/byJoey/cfy/main/cfy.sh)，（配套优选工具）
+优选cloudflare IP(C1901房）:
+172.64.156.15
+104.16.146.92
+104.16.144.15
+104.16.242.148
+172.64.155.24
+172.64.159.201
+104.17.62.140
+vmess-argo优选域名:
+Cm.Soso.Edu.Kg
+Sub.Cmliussss.Net
+Owo.O00o.Ooo
+https://mrxn.net/BESTCFDOMAIN
+ip.sb
+freeyx.cloudflare88.eu.org
+cf.090227.xyz
+cf.877774.xyz
+cf.877771.xyz 
+cdns.doon.eu.org
+cf.zhetengsha.eu.org
+time.is
+japan.com
+www.wto.org
+www.web.com
+www.visa.com
+cloudflare-ech.com
+usa.visa.com
+myanmar.visa.com
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+节点聚合工具：
+https://clash.mcx.qzz.io/
+-----------------------------------------------------------------------------------------------
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+以下是申请的域名：
+申请的域名
+--------------------------------------------------------------------------
+申请了1个付费域名
+CF托管：s1988liu@gmail.com
+Tony1234/
+https://ap.www.namecheap.com/Domains/DomainControlPanel/s1988liu.cfd/domain/
+一年期2026年3月7日到期
+域名:s1988liu.cfd
+-----------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+s1988liu@gmail.com
+登录用户名：s1988liu
+Tony1234!
+十年期2035年3月16日到期
+付费域名：978668.xyz
+已经托管到cloudflare(注册：s1988liu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+liuguoshengniu@gmail.com
+登录用户名：shengniu
+Tony1234/
+十年期2035年10月3日到期
+付费域名：8881977.xyz
+已经托管到cloudflare(注册：liuguoshengniu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+shengtony88@gmail.com
+登录用户名：shengtony88356765
+Tony1234!
+十年期2035年3月12日到期
+付费域名：356765.xyz
+已经托管到cloudflare(注册：shengtony88@gmail.com)
+--------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare（s1988niu@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login（账户：s1988niu@gmail.com）
+1、s1988niu.x10.bz
+2、s1988niu.x10.mx
+3、s1988niu.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare账户:(liuguosheng12345@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login
+Tony1234!  or /
+1、sheng123456.x10.bz
+2、sheng123456.x10.mx
+3、sheng123456.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtony88@gmail.com的github申请的
+Tony1234!
+1、 shengtony88.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+2、sheng202504.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+--------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过s1988niu@gmail.com的github申请的
+Tony1234!
+1、s1988niu.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+2、guo202504.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+-------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-09,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtonyliu@gmail.com的github申请的
+Tony1234!(或/)
+1、shengtonyliu.dpdns.org（已经绑定到用shengtonyliu@gmail.com注册的CF）
+
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每年续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234!
+1、 sheng123456.dpdns.org（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-01,OKOKOKOKOKOKOKOK
+需要y一年有效期：2026-10-01
+https://customer.l53.net/order/service/manage/119802
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234/
+1、 guol53.ggff.net（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+远程控制卢广：
+istorelu.8881977.xyz
+
+cloudflared tunnel run --token eyJhIjoiMDU0MTI3NzFmNmY5YjUxZWUzYWY5NTZkYjcyMDYzYmMiLCJ0IjoiYmRhZGJmNWEtODM1OC00ZTFlLWFhNDYtMDZmOWU2OGRmMmQ4IiwicyI6Ik16UTJNRFpsT1RjdFpHVXdaaTAwWlRCaUxUbGpPR0V0Tm1FMk5UZGlNelF4TXpVMiJ9
+eyJhIjoiMDU0MTI3NzFmNmY5YjUxZWUzYWY5NTZkYjcyMDYzYmMiLCJ0IjoiYmRhZGJmNWEtODM1OC00ZTFlLWFhNDYtMDZmOWU2OGRmMmQ4IiwicyI6Ik16UTJNRFpsT1RjdFpHVXdaaTAwWlRCaUxUbGpPR0V0Tm1FMk5UZGlNelF4TXpVMiJ9
+
+config.yml文件:
+;yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+tunnel: istorelug
+credentials-file: /root/.cloudflared/bdadbf5a-8358-4e1e-aa46-06f9e68df2d8.json
+
+ingress:
+  - hostname: istorelu.8881977.xyz
+    service: http://192.168.100.2:80
+  - service: http_status:404
+;yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+;--------------------------------------------------------------------------------------------------------------------------------
+passwall升级开源项：
+https://naiyous.com/7473.html#google_vignette
+# 进入安装包所在目录
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip passwall_packages_ipk_aarch64_generic.zip
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+#保留原有配置
+rm /usr/share/passwall/rules/proxy_host-opkg
+
+
