@@ -1,0 +1,233 @@
+#okokokokokokokokoOKOKOKOKOKOKOK
+#如果你刚重装完Ubuntu 22.04 64 Bit，我建议你执行这一套“丝滑操作”：
+# 1. 更新并升级所有软件包（耗时约1-2分钟）
+apt update && apt upgrade -y
+# 2. 安装必备的工具包
+apt install -y curl wget jq socat screen git bc lsof
+OR:
+apt install -y curl wget jq socat screen bayer git
+# 3. 如果提示需要重启（刚才看到的 System restart required），立即重启
+reboot
+#结束
+#okokokokokokokokoOKOKOKOKOKOKOK
+
+；4. 关于 REALITY 的额外提醒
+既然你准备安装 REALITY 协议：
+
+内核版本：Ubuntu 22.04 自带的 5.15+ 内核已经完美支持 BBR（网络加速）。你不需要再安装额外的 BBR 脚本，只需开启它即可：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+；
+防火墙：Ubuntu 默认可能开启了 ufw。如果你发现脚本装好了但连不上，记得运行 ufw disable 或者手动放行端口。
+;-------------------------------------------------------------------------------------
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+
+；---------------------------------------------------
+UQIDC_VPS注册信息（云服务器）
+https://www.uqidc.com/cart?action=configureproduct&pid=74
+vps操作系统升级(ssh不能识别指令时：bash <(curl )：
+1、修改后的 vib /etc/apt/sources.list 内容如下(覆盖袁文)：
+#-----------------------------------------------------------------------------
+deb http://archive.debian.org/debian buster main
+deb-src http://archive.debian.org/debian buster main
+
+## Major bug fix updates produced after the final release of the
+## distribution.
+deb http://archive.debian.org/debian-security buster/updates main
+deb-src http://archive.debian.org/debian-security buster/updates main
+
+deb http://archive.debian.org/debian buster-updates main
+deb-src http://archive.debian.org/debian buster-updates main
+
+## Uncomment the following two lines to add software from the 'backports'
+## repository.
+## 
+## N.B. software from this repository may not have been tested as
+## extensively as that contained in the main release, although it includes
+## newer versions of some applications which may provide useful features.
+deb http://archive.debian.org/debian buster-backports main
+deb-src http://archive.debian.org/debian buster-backports main
+#-----------------------------------------------------------------------------
+2、
+apt update
+apt install -y curl
+#完成！
+#-----------------------------------------------------------------------------
+
+；----------------------------最新Passwall、 版本下载网站-------------------------------------------------------------------------------
+istoreos 最新升级Passwall、版本下载网站：
+https://youtu.be/zQSeyn4Gk-Q
+https://ybfl.net/sites/629.html
+;
+二、添加opkg key：
+wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+opkg-key add passwall.pub
+三、添加opkg repository：
+read release arch << EOF
+$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
+EOF
+for feed in passwall_luci passwall_packages passwall2; do
+  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
+done
+或者是：
+read arch << EOF
+$(. /etc/openwrt_release ; echo $DISTRIB_ARCH)
+EOF
+for feed in passwall_luci passwall_packages passwall2; do
+  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/snapshots/packages/$arch/$feed" >> /etc/opkg/customfeeds.conf
+done
+四、安装最新的passwall：
+opkg update
+opkg install luci-app-passwall
+五、如果是安装passwall2，执行以下代码：
+opkg update
+opkg install luci-app-passwall2
+六、安装中文包，如果你打开是英文版的，可继续执行如下代码，安装中文包：
+opkg install luci-i18n-passwall-zh-cn
+opkg install luci-i18n-passwall2-zh-cn
+七、如果你之前passwall的版本太老，或是不能正常使用，可重启软路由或者执行下面的代码：
+/etc/init.d/uhttpd restart
+
+shengtonyniu@gmail.com
+https://www.uqidc.com/service?groupid=305
+用户名：shengtonyniu(ID:8499)
+密码：Tony1234/
+SSH登录信息:
+IP:23.94.247.230  uq26.s1988.cc.cd
+用户名：root
+密码：tydqCDNL6416        fkwuUEGN8538（原密码：RLfhxrTA5tqB）
+端口：36333
+CF解析证书：uq26.s1988.cc.cd
+(cloudflare:xyz05@888812345.xyz，Tony1234!guo)
+;
+隧道域名：uqidc.s1988.cc.cd
+cloudflared.exe service install eyJhIjoiNmMyYmVjZGY3MGM3NTQ1ODhkZDJjZjYwMmFhMzdlOTMiLCJ0IjoiYzUxZjU1ZGEtODFhYy00NTMwLWIxZDMtYTE3MTRmYjFjN2YyIiwicyI6Ik9EZzROV1ZoTkdNdFpEaGhOaTAwTTJZMkxUazJNelV0TmpGa09EUmtZakF5TWpnMiJ9
+；
+一键部署代码：
+1、勇哥：
+目前运行的：		
+bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+	(https://github.com/yonggekkk/sing-box-yg)
+bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+2、老王：
+	(https://github.com/eooce/Sing-box)
+bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+3、Sing-box 全家桶：
+https://github.com/fscarmen/sing-box
+bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+生成节点信息：
+UUID:7407d5e6-7ea4-4290-bbb5-006db17d76af
+VPS状态如下：
+本地IPV4地址：23.94.247.230   本地IPV6地址：无IPV6
+代理IP优先级：IPV4优先出站(23.94.247.230)
+=====================================
+[Mon Mar 16 10:16:32 AM UTC 2026] Your cert is in: /root/.acme.sh/uq26.s1988.cc.cd_ecc/uq26.s1988.cc.cd.cer
+[Mon Mar 16 10:16:32 AM UTC 2026] Your cert key is in: /root/.acme.sh/uq26.s1988.cc.cd_ecc/uq26.s1988.cc.cd.key
+[Mon Mar 16 10:16:32 AM UTC 2026] The intermediate CA cert is in: /root/.acme.sh/uq26.s1988.cc.cd_ecc/ca.cer
+[Mon Mar 16 10:16:32 AM UTC 2026] And the full-chain cert is in: /root/.acme.sh/uq26.s1988.cc.cd_ecc/fullchain.cer
+[Mon Mar 16 10:16:32 AM UTC 2026] Installing key to: /root/ygkkkca/private.key
+[Mon Mar 16 10:16:32 AM UTC 2026] Installing full chain to: /root/ygkkkca/cert.crt
+域名证书申请成功或已存在！域名证书（cert.crt）和密钥（private.key）已保存到 /root/ygkkkca文件夹内
+公钥文件crt路径如下，可直接复制
+/root/ygkkkca/cert.crt
+密钥文件key路径如下，可直接复制
+/root/ygkkkca/private.key
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sing-box节点关键信息、已分流域名情况如下：
+1：Vless-reality协议 端口:49661
+2：Vmess-ws协议 端口:8443
+3：Hysteria2协议 端口:15496  转发多端口: 50000:50100
+4：Tuic5协议 端口:55443  转发多端口: 未添加
+5：Anytls协议 端口:59811
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+🚀【 聚合节点 】节点信息如下：
+
+分享链接
+vless://ebba3bd6-72bc-484f-947c-976612efd620@23.94.247.230:49661?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=M6K65KnkVc9wWG3upn0bR7GMj24xq0QPN0-WJVtRdSw&sid=a5f0aee3&type=tcp&headerType=none#vl-reality-ECS434156674944
+vmess://eyJhZGQiOiJ1cTI2LnMxOTg4LmNjLmNkIiwiYWlkIjoiMCIsImhvc3QiOiJ1cTI2LnMxOTg4LmNjLmNkIiwiaWQiOiJlYmJhM2JkNi03MmJjLTQ4NGYtOTQ3Yy05NzY2MTJlZmQ2MjAiLCJuZXQiOiJ3cyIsInBhdGgiOiJlYmJhM2JkNi03MmJjLTQ4NGYtOTQ3Yy05NzY2MTJlZmQ2MjAtdm0iLCJwb3J0IjoiODQ0MyIsInBzIjoidm0td3MtdGxzLUVDUzQzNDE1NjY3NDk0NCIsInRscyI6InRscyIsInNuaSI6InVxMjYuczE5ODguY2MuY2QiLCJmcCI6ImNocm9tZSIsInR5cGUiOiJub25lIiwidiI6IjIifQo=
+hysteria2://ebba3bd6-72bc-484f-947c-976612efd620@uq26.s1988.cc.cd:15496?security=tls&alpn=h3&insecure=0&mport=15496,50000-50100&sni=uq26.s1988.cc.cd#hy2-ECS434156674944
+tuic://ebba3bd6-72bc-484f-947c-976612efd620:ebba3bd6-72bc-484f-947c-976612efd620@uq26.s1988.cc.cd:55443?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=uq26.s1988.cc.cd&allow_insecure=0&allowInsecure=0#tu5-ECS434156674944
+anytls://ebba3bd6-72bc-484f-947c-976612efd620@uq26.s1988.cc.cd:59811?&sni=uq26.s1988.cc.cd&allowInsecure=0#anytls-ECS434156674944
+
+增加了ws-tls优选域名：Xray Link (Base64):
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/7LubSfi
+SingBox Link:
+https://clash.mcx.qzz.io/b/7LubSfi
+Clash Link:
+https://clash.mcx.qzz.io/c/7LubSfi
+Surge Link:
+https://clash.mcx.qzz.io/s/7LubSfi
+
+;---------------------------------------------------------------
+Vmess_tls节点优化CF：
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/6LYO81l
+SingBox Link:
+https://clash.mcx.qzz.io/b/6LYO81l
+Clash Link:
+https://clash.mcx.qzz.io/c/6LYO81l
+Surge Link:
+https://clash.mcx.qzz.io/s/6LYO81l
+;--------------------------------------------------------------------------------------------------------
+
+
+此 vmess-ws(tls)+Argo节点通过以下优选又生成更多优选IP的节点：
+教学：https://www.youtube.com/watch?v=fmEf6kd_0uY
+https://mliaomcx.com/%e3%80%8aracknerd-%e7%a7%92%e5%8f%98%e5%85%89%e9%80%9f%ef%bc%81%e7%94%a8-cloudflare-%e4%bc%98%e9%80%89-ip-%e4%b8%80%e9%94%ae%e6%8f%90%e9%80%9f%e4%b8%a4%e5%80%8d%ef%bc%8cyoutube-8k/，中的：
+bash <(curl -l -s https://raw.githubusercontent.com/byJoey/cfy/main/cfy.sh)，（配套优选工具）
+节点聚合工具：
+https://clash.mcx.qzz.io/
+优选cloudflare IP(C1901房）:
+172.64.156.15
+104.16.146.92
+104.16.144.15
+104.16.242.148
+172.64.155.24
+172.64.159.201
+104.17.62.140
+vmess-argo优选域名:
+https://mrxn.net/BESTCFDOMAIN
+Cm.Soso.Edu.Kg
+Sub.Cmliussss.Net
+Owo.O00o.Ooo
+ip.sb
+freeyx.cloudflare88.eu.org
+cf.090227.xyz
+cf.877774.xyz
+cf.877771.xyz 
+cdns.doon.eu.org
+cf.zhetengsha.eu.org
+time.is
+japan.com
+www.wto.org
+www.web.com
+www.visa.com
+cloudflare-ech.com
+usa.visa.com
+myanmar.visa.com
+节点聚合工具：
+https://clash.mcx.qzz.io/
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+
+；-----------------------------------------------------------------------------------------------------------
+我技术是小白，有一个VPS（已经安装操作系统：Debian-10.3.3-x64），IP:23.94.247.230，端口范围：希望设置在：36300-37300（或者也可使用CF的443系列端口），请提供搭建一个Hysteria-2和一个Tuic-v5节点的一键脚本（暂时密码:12345678，UUID:d8f8166a-fb51-4532-82df-c23fa0d7a322），VPS已经可用进入SSH界面完成各种操作。23.94.247.230已经在cloudflare上用uqidc.8881977.xyz（其中一级域名：8881977.xyz已经托管到cloudflare：liuguoshengniu@gmail.com，边缘证书有效)解析完成（仅 DNS，关闭了小黄云）。最后请给出可直接使用的Hysteria-2和一个Tuic-v5二合一聚合v2ray和Mihomo/Clash订阅链接信息（可以直接在istoreos或v2rayN上使用），节点限速到< 101Mbps。谢谢！
