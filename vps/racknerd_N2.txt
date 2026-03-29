@@ -1,0 +1,373 @@
+
+#okokokokokokokokoOKOKOKOKOKOKOK
+#如果你刚重装完Ubuntu 22.04 64 Bit，我建议你执行这一套“丝滑操作”：
+# 1. 更新并升级所有软件包（耗时约1-2分钟）
+apt update && apt upgrade -y
+# 2. 安装必备的工具包
+apt install -y curl wget jq socat screen git bc lsof
+OR:
+apt install -y curl wget jq socat screen bayer git
+# 3. 如果提示需要重启（刚才看到的 System restart required），立即重启
+reboot
+#结束
+#okokokokokokokokoOKOKOKOKOKOKOK
+
+；4. 关于 REALITY 的额外提醒
+既然你准备安装 REALITY 协议：
+
+内核版本：Ubuntu 22.04 自带的 5.15+ 内核已经完美支持 BBR（网络加速）。你不需要再安装额外的 BBR 脚本，只需开启它即可：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+；
+防火墙：Ubuntu 默认可能开启了 ufw。如果你发现脚本装好了但连不上，记得运行 ufw disable 或者手动放行端口。
+;-------------------------------------------------------------------------------------
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+；
+域名或VPS到期前提醒续期：
+https://guotime.6.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/admin
+http://guotime.g66.indevs.in/admin（停止了）
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+；---------------------------------------------------
+卢广在R2S部署istoreos（192.168.100.2）双口路由器(2025-05-46)
+远程访问：https://istorelu.8881977.xyz/
+远程访问卢广：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://istorelu.8881977.xyz/
+;
+远程访问：https://r2s.8881977.xyz（192.168.100.4）
+远程访问guo_R2S：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://r2s.8881977.xyz
+;--------------------------------------------------------------------
+购买：
+https://my.racknerd.com/cart.php?a=confproduct&i=2
+https://afeinet.blogspot.com/2024/10/24.html
+192.210.207.88  ok san jose
+192.3.253.2         ok seattle
+107.174.51.158   lax(DC03)
+198.23.228.15    CHICAGO
+在线订阅转换工具：
+https://suburl.v1.mk/
+；
+流量翻倍申请dddddddddddddddddddddddddddddddddddddddd：
+s1988guo@gmail.com
+https://lowendtalk.com/
+账号：racknerd2r   or  s1988guo@gmail.com
+账号：racknerd2d   or dengjijun99@gmail.com
+密码：Tony1234/
+-----------------
+Hi, 
+I would like to double my bandwidth. 
+Invoice #15733645 and 18169670
+ID：py_3RANvFK2CjRWACS30zEYB21R and py_3TCO9wK2CjRWACS30bJ63uwi
+Thank you!
+-------------------------------------------------
+购买的第二个racknerd一年 的VPS（2025-04-05至2026-04-04）：
+续费：https://my.racknerd.com/viewinvoice.php?id=18169670
+https://my.racknerd.com/viewinvoice.php?id=18169670&paysuccess=1
+续费新帳單 #18169670 (04/04/2026 - 04/03/2027)
+;
+https://my.racknerd.com/clientarea.php?action=services
+VPS信息如下：
+IPV4地址：23.95.48.136   
+购买用户邮箱：s1988niu@gmail.com
+以及申请流量翻倍：https://lowendtalk.com/  （https://www.youtube.com/watch?v=4aIARo1r5xM）
+服务器标签：racknerd-N2-guo（原服务器标签：racknerd-0dc83d6）
+1GB KVM VPS 特惠（LEB 专属）
+
+控制面板： https://nerdvm.racknerd.com/
+用户名： vmuser226840
+密码： Tony1234/ （原密码：49Ed41P6hR0ksRs）
+IP 地址：23.95.48.136
+绑定CF s1988liu@gmail.com:
+域名：
+ SSH 程序接入信息：
+用户名：root
+Root 密码：jKzMn6TG4esMm57M47
+SSH 端口 22
+SSH命令：
+放行 端口：
+ufw allow 13156
+关闭防火墙/放行端口：
+sudo ufw disable
+
+优选cloudflare IP：
+https://set-out8.blogspot.com/2024/12/preferred-ip.html
+
+以下显示的域名就是已申请成功的域名证书:
+rn2.978668.xyz
+域名证书申请成功或已存在！域名证书（cert.crt）和密钥（private.key）已保存到 /root/ygkkkca文件夹内
+公钥文件crt路径如下，可直接复制
+/root/ygkkkca/cert.crt
+密钥文件key路径如下，可直接复制
+/root/ygkkkca/private.key
+
+；----------------------------最新Passwall、openclash 版本下载网站-------------------------------------------------------------------------------
+R2S istoreos 最新Passwall、openclash 版本下载网站：
+https://github.com/AUK9527/Are-u-ok/blob/main/apps/README.md
+;
+对于 R2S（基于 aarch64 架构）运行的 iStoreOS，下载最新版 Passwall 或 Passwall2 插件及其依赖包，最推荐的三个官方/主流渠道如下：
+
+1. iStoreOS 官方插件包 (最推荐)
+这是针对 iStoreOS 优化的 .run 安装包，集成了依赖，安装最简单。
+
+下载地址： GitHub - AUK9527/Are-u-ok (Apps 目录)
+
+版本说明： 截至 2026 年 1 月，提供有 PassWall_25.12.27 和 PassWall2_25.12.25 等版本。
+
+安装方法： 下载对应的 .run 文件后，在 iStoreOS 后台的“iStore 应用商店”选择“手动安装”，上传文件即可。
+
+2. Passwall 官方 Release 频道 (手动更新)
+如果你需要最纯净、最新的编译版本，直接去开发者的发布页面。
+
+Passwall (经典版)： GitHub - Openwrt-Passwall/openwrt-passwall/releases
+
+Passwall2 (重构版)： GitHub - Openwrt-Passwall/openwrt-passwall2/releases
+
+下载建议： * 下载 luci-app-passwall_xxx_all.ipk（主程序）和 luci-i18n-passwall-zh-cn_xxx_all.ipk（汉化包）。
+
+注意： 手动安装 .ipk 可能提示缺少依赖（如 xray-core、sing-box 等），需要一并下载对应架构（R2S 选择 aarch64_cortex-a53 或 aarch64_generic）的组件包。
+
+3. OpenWrt-Passwall-Build (第三方自动构建)
+这是一个自动同步官方源码并编译好的镜像站，适合寻找特定构架的依赖包。
+
+SourceForge 下载站： openwrt-passwall-build
+
+路径： 依次进入 snapshots -> packages -> aarch64_cortex-a53 -> passwall_packages，可以找到最新的 Xray、Sing-box、Shadowsocks 等核心组件。
+
+💡 安装建议
+架构确认： R2S 属于 aarch64 架构，下载组件包时请认准该标识。
+
+Passwall vs Passwall2： * Passwall： 经典稳定，功能成熟。
+
+Passwall2： 对较新的协议（如 Hysteria2、TUIC）支持更好，界面略有不同。
+
+依赖问题： 如果手动安装 ipk 失败，建议先在 SSH 执行 opkg update，或优先使用第一种方式提供的 .run 全家桶。
+；-----------------------------------------------------------------------------------------------------------
+
+s1988liu@gmail.com
+rn2zt.978668.xyz
+cloudflared.exe service install eyJhIjoiMDkxNzQ2NjljYWI0ZTNlMmE2NzEwOWY3NTlmNTVhNDIiLCJ0IjoiN2QzZWFmMjUtNDQ4OS00MGZiLWJkMzMtOGU2ODM3NTY4NGQ3IiwicyI6IlpURTJNelF3T1RndFpqWmxNaTAwT0RVekxXSXpZVGN0WW1VeE5qQXhPVFk1WW1FMCJ9
+
+cloudflared.exe service install eyJhIjoiMDkxNzQ2NjljYWI0ZTNlMmE2NzEwOWY3NTlmNTVhNDIiLCJ0IjoiN2QzZWFmMjUtNDQ4OS00MGZiLWJkMzMtOGU2ODM3NTY4NGQ3IiwicyI6IlpURTJNelF3T1RndFpqWmxNaTAwT0RVekxXSXpZVGN0WW1VeE5qQXhPVFk1WW1FMCJ9
+--------------------------------------------------------------------------------------------------------------------------------------
+运行：
+1、勇哥：
+bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+	(https://github.com/yonggekkk/sing-box-yg)
+bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+2、老王：
+	(https://github.com/eooce/Sing-box)
+bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+4321
+生成节点信息：
+
+VPS状态如下：
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+系统:Ubuntu 22.04.5 LTS  内核:5.15.0  处理器:amd64  虚拟化:kvm  BBR算法:bbr
+本地IPV4地址：23.95.48.136   本地IPV6地址：无IPV6
+代理IP优先级：IPV4优先出站(23.95.48.136)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sing-box节点关键信息、已分流域名情况如下：
+🚀【 Vless-reality 】端口:64307  Reality域名证书伪装地址：apple.com
+🚀【 Vmess-ws-tls  】端口:8443   证书形式:TLS开启   Argo状态:不支持开启
+🚀【  Hysteria-2   】端口:15868  证书形式:域名证书  转发多端口: 50000:50100
+🚀【    Tuic-v5    】端口:53884  证书形式:域名证书  转发多端口: 未添加
+🚀【    Anytls     】端口:56923  证书形式:域名证书
+#---------------------------------------------------------------------------------------------
+本地IPV4地址：23.95.48.136   证书：rn2.978668.xyz
+------------------------------------------------------------------------------------
+WARP-plus-Socks5状态：未启动
+-------------------------------------------------------------------------------------------------------------------------------
+注意：********************************************
+passwall配置中tuic节点需要重新补填写：密码和ID.************************
+🚀【 聚合节点 】节点信息如下：
+
+分享链接
+vless://32227afe-bec2-45c2-b2df-e42583e0a009@23.95.48.136:64307?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=XsvPdRloxgb9WN5mBpsnzp-Duw_0MqsB97CJWYqNNmY&sid=7cb4e0ef&type=tcp&headerType=none#vl-reality-racknerd-N2-guo
+vmess://eyJhZGQiOiJybjIuOTc4NjY4Lnh5eiIsImFpZCI6IjAiLCJob3N0Ijoicm4yLjk3ODY2OC54eXoiLCJpZCI6IjMyMjI3YWZlLWJlYzItNDVjMi1iMmRmLWU0MjU4M2UwYTAwOSIsIm5ldCI6IndzIiwicGF0aCI6IjMyMjI3YWZlLWJlYzItNDVjMi1iMmRmLWU0MjU4M2UwYTAwOS12bSIsInBvcnQiOiI4NDQzIiwicHMiOiJ2bS13cy10bHMtcmFja25lcmQtTjItZ3VvIiwidGxzIjoidGxzIiwic25pIjoicm4yLjk3ODY2OC54eXoiLCJmcCI6ImNocm9tZSIsInR5cGUiOiJub25lIiwidiI6IjIifQo=
+hysteria2://32227afe-bec2-45c2-b2df-e42583e0a009@rn2.978668.xyz:15868?security=tls&alpn=h3&insecure=0&mport=15868,50000-50100&sni=rn2.978668.xyz#hy2-racknerd-N2-guo
+tuic://32227afe-bec2-45c2-b2df-e42583e0a009:32227afe-bec2-45c2-b2df-e42583e0a009@rn2.978668.xyz:53884?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=rn2.978668.xyz&allow_insecure=0&allowInsecure=0#tu5-racknerd-N2-guo
+anytls://32227afe-bec2-45c2-b2df-e42583e0a009@rn2.978668.xyz:56923?&sni=rn2.978668.xyz&allowInsecure=0#anytls-racknerd-N2-guo
+
+
+添加了cf ws-tls，修改了hy2和tuic的地址为直接IP:23.95.48.136 :
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/fNz0dbJ
+SingBox Link:
+https://clash.mcx.qzz.io/b/fNz0dbJ
+Clash Link:
+https://clash.mcx.qzz.io/c/fNz0dbJ
+Surge Link:
+https://clash.mcx.qzz.io/s/fNz0dbJ
+
+
+*******************************************
+
+
+4、ws-tls、reality、anytls加密协议：
+
+;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ vmess-ws(tls)+Argo节点通过以下优选又生成更多优选IP的VMess节点：
+教学：https://www.youtube.com/watch?v=fmEf6kd_0uY
+https://mliaomcx.com/%e3%80%8aracknerd-%e7%a7%92%e5%8f%98%e5%85%89%e9%80%9f%ef%bc%81%e7%94%a8-cloudflare-%e4%bc%98%e9%80%89-ip-%e4%b8%80%e9%94%ae%e6%8f%90%e9%80%9f%e4%b8%a4%e5%80%8d%ef%bc%8cyoutube-8k/，中的：
+bash <(curl -l -s https://raw.githubusercontent.com/byJoey/cfy/main/cfy.sh)，（配套优选工具）
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+节点聚合工具：
+https://clash.mcx.qzz.io/
+各种协议：
+Vmess_tls节点优化：
+Xray Link (Base64)、Clash Link、SingBox Link聚合:
+https://sublink.eooce.com/x/DSDJeYl
+CLASH:
+短连接：
+https://sublink.eooce.com/c/DSDJeYl
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+S-UI面板:
+bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+以下是申请的域名：
+申请的域名
+--------------------------------------------------------------------------
+申请了1个付费域名
+CF托管：s1988liu@gmail.com
+Tony1234/
+https://ap.www.namecheap.com/Domains/DomainControlPanel/s1988liu.cfd/domain/
+一年期2026年3月7日到期
+域名:s1988liu.cfd
+-----------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+s1988liu@gmail.com
+登录用户名：s1988liu
+Tony1234!
+十年期2035年3月16日到期
+付费域名：978668.xyz
+已经托管到cloudflare(注册：s1988liu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+liuguoshengniu@gmail.com
+登录用户名：shengniu
+Tony1234/
+十年期2035年10月3日到期
+付费域名：8881977.xyz
+已经托管到cloudflare(注册：liuguoshengniu@gmail.com)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+shengtony88@gmail.com
+登录用户名：shengtony88356765
+Tony1234!
+十年期2035年3月12日到期
+付费域名：356765.xyz
+已经托管到cloudflare(注册：shengtony88@gmail.com)
+--------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare（s1988niu@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login（账户：s1988niu@gmail.com）
+1、s1988niu.x10.bz
+2、s1988niu.x10.mx
+3、s1988niu.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了3个免费域名并且都托管的Cloudflare账户:(liuguosheng12345@gmail.com,需要双向解析:https://www.youtube.com/watch?v=NO4p4sAuTfs）
+2026-04到期
+https://x10hosting.com/login
+Tony1234!  or /
+1、sheng123456.x10.bz
+2、sheng123456.x10.mx
+3、sheng123456.elementfx.com
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtony88@gmail.com的github申请的
+Tony1234!
+1、 shengtony88.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+2、sheng202504.dpdns.org（已经绑定到用shengtony88@gmail.com注册的CF）
+--------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过s1988niu@gmail.com的github申请的
+Tony1234!
+1、s1988niu.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+2、guo202504.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+-------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-09,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过shengtonyliu@gmail.com的github申请的
+Tony1234!(或/)
+1、shengtonyliu.dpdns.org（已经绑定到用shengtonyliu@gmail.com注册的CF）
+
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每年续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234!
+1、 sheng123456.dpdns.org（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-01,OKOKOKOKOKOKOKOK
+需要y一年有效期：2026-10-01
+https://customer.l53.net/order/service/manage/119802
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234/
+1、 guol53.ggff.net（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+
+
+
+passwall升级开源项：
+https://naiyous.com/7473.html#google_vignette
+# 进入安装包所在目录
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip passwall_packages_ipk_aarch64_generic.zip
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+#保留原有配置
+rm /usr/share/passwall/rules/proxy_host-opkg
+
+
+
+
+
+tony1234
+
+
+
+
+
+
+
