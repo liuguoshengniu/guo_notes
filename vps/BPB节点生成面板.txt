@@ -1,0 +1,510 @@
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+
+卢广在R2S部署istoreos（192.168.100.2）双口路由器(2025-05-46)
+远程访问：https://istorelu.8881977.xyz/
+远程访问卢广：(教学：https://www.youtube.com/watch?v=EHRVZ-DheDo)
+https://istorelu.8881977.xyz/
+公网穿透地址(用无痕模式)：
+https://metalu.8881977.xyz/ui/metacubexd/#/
+后端地址OK(用无痕模式)：
+https://metalu.8881977.xyz
+;
+https://r2s.8881977.xyz/
+公网穿透地址(用无痕模式)：
+https://r2sr.8881977.xyz/ui/metacubexd/#/
+后端地址(用无痕模式)：
+https://r2sr.8881977.xyz
+;
+;--------------------------------------------------------------------
+
+混淆代码：https://www.jshaman.com/
+
+
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+；----------------------------------------------------------------------------------
+也可以用xxx@888812345.xyz注册无数Cloudflare账户，
+	他们也是可以通过shengtony22@gmail.com结束注册信息。
+;----------------
+cloudflare:cfguo@s1977.de5.net 密码：Tony1234!guo
+；---------------------------------------------------------------------------
+
+PROXYIP选择1：
+ProxyIP.US.CMLiussss.Net
+ProxyIP.SG.CMLiussss.Net
+ProxyIP.JP.CMLiussss.Net
+bpb.yousef.isegaro.com
+pyip.ygkkk.dpdns.org
+[2a02:898:146:64::]
+[2602:fc59:b0:64::]
+[2602:fc59:11:64::]
+
+PROXYIP选择2：
+https://ipdb.030101.xyz/bestproxy/
+47.74.157.194	4	4	0.00	227.61	3.61		SG
+193.123.80.245	4	4	0.00	272.19	3.48		AE
+143.47.179.237	4	4	0.00	224.72	2.62		NL
+PROXYIP选择3：
+https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+优选cloudflare IP：
+https://set-out8.blogspot.com/2024/12/preferred-ip.html
+cleanIP/优选IP：
+IP Address,Sent,Received,Loss Rate,Average Delay,Download Speed (MB/s)
+104.17.169.103
+104.16.148.208
+104.17.209.180
+104.16.153.114
+104.16.248.149
+104.17.212.64
+104.18.87.120
+104.17.109.142
+104.17.106.240
+172.64.228.253
+vmess-ws(tls)+Argo节点通过以下优选又生成更多优选IP的节点：
+教学：https://www.youtube.com/watch?v=fmEf6kd_0uY
+https://mliaomcx.com/%e3%80%8aracknerd-%e7%a7%92%e5%8f%98%e5%85%89%e9%80%9f%ef%bc%81%e7%94%a8-cloudflare-%e4%bc%98%e9%80%89-ip-%e4%b8%80%e9%94%ae%e6%8f%90%e9%80%9f%e4%b8%a4%e5%80%8d%ef%bc%8cyoutube-8k/，中的：
+bash <(curl -l -s https://raw.githubusercontent.com/byJoey/cfy/main/cfy.sh)，（配套优选工具）
+优选cloudflare IP(C1901房）:
+172.64.156.15
+104.16.146.92
+104.16.144.15
+104.16.242.148
+172.64.155.24
+172.64.159.201
+104.17.62.140
+vmess-argo优选域名:
+Cm.Soso.Edu.Kg
+Sub.Cmliussss.Net
+Owo.O00o.Ooo
+ip.sb
+freeyx.cloudflare88.eu.org
+cf.090227.xyz
+cf.877774.xyz
+cf.877771.xyz 
+cdns.doon.eu.org
+cf.zhetengsha.eu.org
+time.is
+www.wto.org
+www.web.com
+www.visa.com
+usa.visa.com
+80系端口-禁用TLS（7个）：
+80、8080、8880、2052、2082、2086、2095
+443系端口-启用TLS（6个）：
+443、8443、2053、2083、2087、2096
+节点聚合工具：
+https://clash.mcx.qzz.io/
+;--------------------------------------------------------------------------------------------------------------------------------
+
+:snippets111111111111111111111111111snippets1111111111111111111111111111111111111111111
+3、节点生成项目：okokokokokokoko（https://www.youtube.com/watch?v=JBv-thjmVP8）
+CF(s1988liu@gmail.com)中的规则的Snippets生成
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+以下可参考https://www.youtube.com/watch?v=JBv-thjmVP8后部分视频修改
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import { connect } from 'cloudflare:sockets';
+
+// --- 硬编码配置 ---
+const authToken = '70837615-cb85-49ab-8120-39a54c9751b7';
+let fallbackAddress = '';
+const socks5Config = '';
+// 手动指定地区（留空则自动检测，可选值：US、SG、JP、HK、KR、DE、SE、NL、FI、GB）
+const manualWorkerRegion = '';
+// D短地址（自定义路径，留空则使用UUID路径，支持多级路径如：mypath 或 path/to/sub）
+const customPath = '/tony1234';
+// GitHub订阅URL（硬编码）
+const githubPreferredURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+// 启用GitHub优选IP（true启用，false禁用）
+const enableGitHubPreferred = true;
+// 启用其他优选（域名优选，true启用，false禁用）
+const enableOtherPreferred = true;
+// API地址配置（订阅转换服务）
+const apiBaseUrl = 'https://url.v1.mk/sub';
+
+const directDomains = [
+  { name: "cloudflare.182682.xyz", domain: "cloudflare.182682.xyz" },
+  { name: "time.is", domain: "time.is" },
+  { domain: "www.web.com" }, { domain: "bestcf.top" },
+   { domain: "cf.0sm.com" }, { domain: "www.4chan.org" },
+  { domain: "www.gov.ua" }, { domain: "www.udemy.com" },
+  { domain: "www.gov.se" }, { domain: "cfip.1323123.xyz" },
+  { domain: "www.visa.com.sg" }, { domain: "www.wto.org" },
+  { domain: "usa.visa.com" }, { domain: "ip.sb" },
+  { domain: "cdns.doon.eu.org" }, { domain: "www.glassdoor.com" }
+];
+
+#///////////////////    snippets1 ////////////////////////////////////////////////////////////
+生成代码：
+https://github.com/jackrun123/cf_snippets_proxy/blob/main/snippets.js
+https://github.com/byJoey/cfnew/blob/main/snippets
+使用节点：snip1.356765.xyz(shengtony88@gmail.com)
+ UUID：a760e6d4-887a-45c8-8f94-ddf1e3aeafae      70837615-cb85-49ab-8120-39a54c9751b7
+生产的节点：
+https://snip1.356765.xyz/tony1234
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fsnip1.356765.xyz%2Ftony1234%2Fsub&insert=false
+v2ray:
+https://snip1.356765.xyz/tony1234/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fsnip1.356765.xyz%2Ftony1234%2Fsub&insert=false
+#2222222222Snippets222222222222222222222222222Snippets222222222222222222222222222222
+第二个Snippets节点生成：
+https://www.youtube.com/watch?v=ZXzsVg1adL8
+https://www.youtube.com/watch?v=GEcKz2NoKlM
+https://github.com/eooce/CF-Workers-and-Snip-VLESS
+节点生成：
+https://sni2eooce.978668.xyz/62b5f56b-21c1-4188-bf09-b2702245ed69
+；
+v2rayN / Loon / Shadowrocket / Karing订阅:
+https://sni2eooce.978668.xyz/sub/62b5f56b-21c1-4188-bf09-b2702245ed69
+；
+Mihomo / FlClash / Clash Meta订阅:
+https://sublink.eooce.com/clash?config=https://sni2eooce.978668.xyz/sub/62b5f56b-21c1-4188-bf09-b2702245ed69
+；
+Sing-box 系列订阅:
+https://sublink.eooce.com/singbox?config=https://sni2eooce.978668.xyz/sub/62b5f56b-21c1-4188-bf09-b2702245ed69
+
+usa.visa.com#US','japan.com#JP','ip.sb#SG','fbi.gov#HK', 'icook.tw#TW', 'store.ubi.com#HK','cf.130519.xyz#HK','www.visa.com.sg#SG', 
+    'www.visa.com.tw#TW', 'www.visa.co.jp#JP','cdns.doon.eu.org#JP','sub.danfeng.eu.org#TW','asia.877774.xyz#HK','eur.877774.xyz#US',
+    'time.is#SG','www.wto.org#HS','www.web.com#SG','www.visa.com#SG','cloudflare-ech.com#US','myanmar.visa.com#SG','www.visakorea.com#KR',
+    'www.gco.gov.qa#SG','www.gov.se#SG','www.gov.ua#SG','www.hugedomains.com#SG','www.csgo.com#SG','www.ipget.net#SG','cfcdn.v6.rock#SG
+
+;3333333333333snippets3333333333333333333---sni3.978668.xyz----3333333333333333333333333333
+第3个Snippets节点生成：okokokokokokoko（CF:s1988liu@gmail.com)Shadowsocks 节点
+https://www.youtube.com/watch?v=hUPN_69Atow
+https://github.com/eooce/Cloudflare-proxy/blob/main/shadowsocks.js
+###########################################################################
+
+// 如需要使用环境变量,将462至468行取消注释
+import { connect } from 'cloudflare:sockets';
+
+let subPath = 'link';     // 节点订阅路径,不修改将使用UUID作为订阅路径
+let proxyIP = '210.61.97.241:81';  // proxyIP 格式：ip、域名、ip:port、域名:port等,没填写port，默认使用443
+let password = '6138acc4-aded-4bf1-8583-37aff626a346';  // 节点UUID
+let SSpath = '';          // 路径验证，为空则使用UUID作为验证路径
+
+// CF-CDN 
+let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
+    'www.4chan.org#HK','www.glassdoor.com#SG','icook.tw#TW',
+    'www.web.com#SG','usa.visa.com#US','bestcf.top#SG',
+    'www.udemy.com#SG','www.visa.co.jp#JP','www.gov.ua#UA'
+];  // 感谢各位大佬维护的优选域名
+
+########################################################################
+节点界面：
+https://sni3ss.978668.xyz/6138acc4-aded-4bf1-8583-37aff626a346
+;
+V2rayN(7.16.4)/Nekobox/小火箭/v2rayng(安卓1.8.25)/kraing(1.2.8.1100以上) 订阅链接：
+https://sni3ss.978668.xyz/sub/6138acc4-aded-4bf1-8583-37aff626a346
+;
+clash订阅链接：
+https://sub.ssss.xx.kg/clash?config=https://sni3ss.978668.xyz/sub/6138acc4-aded-4bf1-8583-37aff626a346
+;
+Quantumult X节点配置：
+shadowsocks=mfa.gov.ua:443,method=none,password=6138acc4-aded-4bf1-8583-37aff626a346,obfs=wss,obfs-host=sni3ss.978668.xyz,obfs-uri=/6138acc4-aded-4bf1-8583-37aff626a346/?ed=2560,fast-open=true, udp-relay=true,tag=SS
+;4444444444444444444444444444444444444444444snippetes4-444444444444444444444444444444444444444444444444444444
+第4个Snippets节点生成：okokokokokokoko（CF:s1988liu@gmail.com)
+教学：https://www.youtube.com/watch?v=JBv-thjmVP8
+https://www.freedidi.com/20770.html
+UUID:f3222d75-0fb2-485d-9abd-e3d3b56faa38
+生成节点：
+https:/sni3.978668.xyz/f3222d75-0fb2-485d-9abd-e3d3b56faa38
+clash订阅地址:
+https://clash.mcx.qzz.io/c/29Qq1a6
+singbox订阅地址:
+https://clash.mcx.qzz.io/b/29Qq1a6
+通用订阅地址:
+https://clash.mcx.qzz.io/x/29Qq1a6
+
+;55555555555555555555555555555 sni5.978668.xyz 5555555555555555555555555555555555555555555555555555
+第5个Snippets节点生成：okokokokokokoko（CF:s1988liu@gmail.com)
+https://github.com/jackrun123/cf_snippets_proxy/blob/main/snippets.js
+sni5.978668.xyz/9c73f4eb-7e3f-4e98-b816-47697b10981d
+;
+
+;--------pages-------yong------------------------------------
+10、节点生成项目：okokokokokokoko（CF:yong@s1977.de5.net)
+甬哥博客地址：https://ygkkk.blogspot.com
+甬哥YouTube频道：https://www.youtube.com/@ygkkk
+甬哥TG电报群组：https://t.me/ygkkktg
+甬哥TG电报频道：https://t.me/ygkkktgpd
+ProxyIP全局运行中：pyip.ygkkk.dpdns.org:443
+；
+教学：
+https://www.youtube.com/watch?v=yR-JpVV6SHs
+yong1部署（nat64套壳版混淆文件：可用 自带nat64自动转换proxyip，可以访问推特X、Chatgpt等CF类网站，不支持自定义proxyip）：
+https://github.com/yonggekkk/Cloudflare-vless-trojan/blob/main/Vless_workers_pages/nat64%E5%A5%97%E5%A3%B3%E7%89%88%E6%B7%B7%E6%B7%86.js
+UUID:ed9c9e49-79bd-4a97-b32c-96df09629654
+无域名节点生成：
+https://yongguo.pages.dev/ed9c9e49-79bd-4a97-b32c-96df09629654
+聚合通用订阅链接：
+https://yongguo.pages.dev/ed9c9e49-79bd-4a97-b32c-96df09629654/pty	
+Clash-meta订阅链接：
+https://yongguo.pages.dev/ed9c9e49-79bd-4a97-b32c-96df09629654/pcl	
+Sing-box订阅链接：
+https://yongguo.pages.dev/ed9c9e49-79bd-4a97-b32c-96df09629654/psb	
+;
+yong2部署AI（_worker.js混淆文件：可用 proxyip可自定义:ProxyIP.US.CMLiussss.Net，proxyip失效将无法访问推特X、Chatgpt等CF类网站)：
+https://github.com/yonggekkk/Cloudflare-vless-trojan/blob/main/Vless_workers_pages/nat64%E5%A5%97%E5%A3%B3%E7%89%88%E6%B7%B7%E6%B7%86.js
+UUID:520cba34-d121-4dfc-b9f6-d6882466bfe2
+无域名节点生成：
+https://yong2-bx4.pages.dev/520cba34-d121-4dfc-b9f6-d6882466bfe2
+聚合通用订阅链接：
+https://yong2-bx4.pages.dev/520cba34-d121-4dfc-b9f6-d6882466bfe2/pty	
+Clash-meta订阅链接：
+https://yong2-bx4.pages.dev/520cba34-d121-4dfc-b9f6-d6882466bfe2/pcl	
+Sing-box订阅链接：
+https://yong2-bx4.pages.dev/520cba34-d121-4dfc-b9f6-d6882466bfe2/psb
+
+;-------pages-------------guop.8881977.xyz-----------------------------
+11、节点生成项目：okokokokokokoko（CF:liuguoshengniu@gmail.com)
+https://www.youtube.com/watch?v=CxNGmabK_ps
+https://github.com/byJoey/cfnew     (选择：少年你相信光吗)
+无域名pages生成节点：:
+https://pguo-f2i.pages.dev/79e775c2-4731-4f20-820d-ad9fee95e22e
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fpguo-f2i.pages.dev%2F79e775c2-4731-4f20-820d-ad9fee95e22e%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+
+v2rayNG：
+https://pguo-f2i.pages.dev/79e775c2-4731-4f20-820d-ad9fee95e22e/sub
+
+sing-box：
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fpguo-f2i.pages.dev%2F79e775c2-4731-4f20-820d-ad9fee95e22e%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+；======
+有域名pages(guop.8881977.xyz)：
+生成节点：
+guop.8881977.xyz/79e775c2-4731-4f20-820d-ad9fee95e22e
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fguop.8881977.xyz%2F79e775c2-4731-4f20-820d-ad9fee95e22e%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+
+v2rayNG：
+https://guop.8881977.xyz/79e775c2-4731-4f20-820d-ad9fee95e22e/sub
+
+sing-box：
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fguop.8881977.xyz%2F79e775c2-4731-4f20-820d-ad9fee95e22e%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+
+Shadowrocket节点：
+https://guop.8881977.xyz/79e775c2-4731-4f20-820d-ad9fee95e22e/sub
+
+;---?????---edgetunnel方式，CLASH非常OK--??????????????????????????????-------------
+13、节点生成项目：okokokokokokoko（CF:xyzfc@888812345.xyz，Tony1234!guo)
+教学：edgetunnel方式，CLASH非常OK: https://www.youtube.com/watch?v=h8y3qsPlkog  OR     https://www.youtube.com/watch?v=2lrf80h1MNk
+https://github.com/cmliu/edgetunnel/blob/main/_worker.js
+说明：
+https://kjgx668.blogspot.com/2025/12/vpn-worker-geminiai-vpn-10.html
+生成节点管理界面：
+https://tun.sheng202504.dpdns.org/admin
+密码：tony1234
+；
+节点链接格式：
+vless://8d62d3a8-ff46-4ce1-9491-ee37e28cac31@tun.sheng202504.dpdns.org:443?security=tls&type=ws&host=tun.sheng202504.dpdns.org&fp=chrome&sni=tun.sheng202504.dpdns.org&path=%2F&encryption=none#edgetunnel
+自适应订阅:
+https://tun.sheng202504.dpdns.org/sub?token=1cdc85bc6ba051e06d87de49cdb70fb4
+clash:
+https://tun.sheng202504.dpdns.org/sub?token=1cdc85bc6ba051e06d87de49cdb70fb4&clash
+sing-box:
+https://tun.sheng202504.dpdns.org/sub?token=1cdc85bc6ba051e06d87de49cdb70fb4&sb
+;---------------pages-------------BPB4XX-------------------------------------------------------------
+14、BPB Panel v4.1.3(只能使用clash ver)2025-12-25
+https://www.youtube.com/watch?v=PcjBVrgO45k
+https://github.com/bia-pain-bache/BPB-Worker-Panel
+无域名（可以选择是否ECH）：
+CF:xyzbpb@888812345.xyz,Tony1234!guo
+https://xyzbpb-c3v.pages.dev/panel
+clash:
+https://xyzbpb-c3v.pages.dev/sub/normal/91fd451e-1653-451b-a775-7302bddfef71?app=clash#%F0%9F%92%A6%20BPB%20Normal
+v2rayN (sing-box):
+https://xyzbpb-c3v.pages.dev/sub/normal/91fd451e-1653-451b-a775-7302bddfef71?app=sing-box#%F0%9F%92%A6%20BPB%20Normal
+有域名1（9 Jan 2027到期）：
+xyzbpb.g55.indevs.in/panel
+clash:
+https://xyzbpb.g55.indevs.in/sub/normal/91fd451e-1653-451b-a775-7302bddfef71?app=clash#%F0%9F%92%A6%20BPB%20Normal
+v2rayN (sing-box):
+https://xyzbpb.g55.indevs.in/sub/normal/91fd451e-1653-451b-a775-7302bddfef71?app=sing-box#%F0%9F%92%A6%20BPB%20Normal
+
+;----------老王---------用pages部署的(特点：可以无域名)----------------------------------------
+17、节点生成项目：okokokokokokoko（CF:liugs1977@gmail.com，密码：Tony1234!guo),Shadowsocks节点部署
+https://www.youtube.com/watch?v=kNi6OwJ_e5k&t=208s
+https://github.com/eooce/Cloudflare-proxy/releases/tag/Pages
+UUID:ca4b75a6-7ca6-46ea-8af2-bb754ba1c19d
+密码：tony1234
+Shadowsocks 订阅节点生成（无域名）:
+https://ssguodd.pages.dev/tony1234
+clash:
+https://sub.ssss.xx.kg/clash?config=https://ssguodd.pages.dev/sub/tony1234
+v2rayN:
+https://ssguodd.pages.dev/sub/tony1234
+;
+Shadowsocks 订阅节点生成（有域名）:
+https://ss.s1977.indevs.in/tony1234
+clash:
+https://sub.ssss.xx.kg/clash?config=https://ss.s1977.indevs.in/sub/tony1234
+v2rayN:
+https://ss.s1977.indevs.in/sub/tony1234
+
+;-----------老王eooce------------用pages部署的--------------------------------------------
+18、节点生成项目：okokokokokokoko（CF:yong@s1977.de5.net，密码：Tony1234!guo)老王
+https://www.youtube.com/watch?v=kNi6OwJ_e5k&t=208s
+https://github.com/eooce/Cloudflare-proxy/releases/tag/Pages
+UUID:ddbcc9a5-7193-44aa-a99e-6f3649df6ea3
+订阅节点生成（无域名）:
+https://eooce-bp7.pages.dev/?password=tony1234
+密码：tony1234
+clash:
+https://sublink.eooce.com/clash?config=https://eooce-bp7.pages.dev/5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+v2rayN:
+https://eooce-bp7.pages.dev/5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+sing-box:
+https://sublink.eooce.com/singbox?config=https://eooce-bp7.pages.dev/5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+;
+AI_CF:
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/7S8qcGD
+SingBox Link:
+https://clash.mcx.qzz.io/b/7S8qcGD
+Clash Link:
+https://clash.mcx.qzz.io/c/7S8qcGD
+
+;-----------------------用pages部署的------卢广在用-电信--------------------------------------------------------
+19、节点生成项目：okokokokokokoko（CF:guanglu0722@gmail.com，密码：Tony1234!guo)少年你相信光吗
+https://www.youtube.com/watch?v=JhVxJChDL-E
+订https://www.youtube.com/watch?v=Bj9Rx_lIb3U
+https://github.com/byJoey/cfnew/releases/tag/v2.9
+阅节点生成（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://pplug.pages.dev/b5745fff-9bf2-4e1b-bb4f-2ab8b593af21
+clash:
+https://pplug.pages.dev/b5745fff-9bf2-4e1b-bb4f-2ab8b593af21/sub?target=clash
+v2rayN:
+https://pplug.pages.dev/b5745fff-9bf2-4e1b-bb4f-2ab8b593af21/sub
+;------------------------用pages部署的---------------------------------------------------------------
+19、节点生成项目：okokokokokokoko（CF:dengjijun99@gmail.com，密码：Tony1234!guo)少年你相信光吗
+https://www.youtube.com/watch?v=JhVxJChDL-E
+https://www.youtube.com/watch?v=Bj9Rx_lIb3U
+https://github.com/byJoey/cfnew/releases/tag/v2.9
+阅节点生成（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://f9735dcc.dengjd.pages.dev/95775713-b970-4326-a840-eccf29b17fad
+clash:
+https://f9735dcc.dengjd.pages.dev/95775713-b970-4326-a840-eccf29b17fad/sub?target=clash
+v2rayN:
+https://f9735dcc.dengjd.pages.dev/95775713-b970-4326-a840-eccf29b17fad/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Ff9735dcc.dengjd.pages.dev%2F95775713-b970-4326-a840-eccf29b17fad%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;-----------------------用worker部署的---------卢广在用-电信--------------------------------------------------------
+20、节点生成项目：okokokokokokoko（CF:fc88@888812345.xyz，密码：Tony1234!guo)少年你相信光吗
+https://github.com/byJoey/cfnew?tab=readme-ov-file
+;
+阅节点生成（域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://xyzjd.guo202504.dpdns.org/2cae00bb-5e7a-43bf-9219-e25900ec1c42
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fxyzjd.guo202504.dpdns.org%2F2cae00bb-5e7a-43bf-9219-e25900ec1c42%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://xyzjd.guo202504.dpdns.org/2cae00bb-5e7a-43bf-9219-e25900ec1c42/sub
+
+;--------勾选了ECH-----用pages部署的------------------------------
+21、节点生成项目：okokokokokokoko（CF:fc88@888812345.xyz，密码：Tony1234!guo)少年你相信光吗
+https://www.youtube.com/watch?v=JhVxJChDL-E
+https://github.com/byJoey/cfnew?tab=readme-ov-file
+;
+阅节点生成（域名，但因为勾选了ECH，域名无效了）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://xyzp.guo202504.dpdns.org/706ce639-2d34-4256-8f0c-15c6cd739e6c
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fxyzp.guo202504.dpdns.org%2F706ce639-2d34-4256-8f0c-15c6cd739e6c%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://xyzp.guo202504.dpdns.org/706ce639-2d34-4256-8f0c-15c6cd739e6c/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fxyzp.guo202504.dpdns.org%2F706ce639-2d34-4256-8f0c-15c6cd739e6c%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;
+阅节点生成ECH（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://xyzp.pages.dev/706ce639-2d34-4256-8f0c-15c6cd739e6c
+;
+clash:
+勾选了ECH:
+https://xyzp.pages.dev/706ce639-2d34-4256-8f0c-15c6cd739e6c/sub?target=clash
+没有勾选ECH是:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fxyzp.pages.dev%2F706ce639-2d34-4256-8f0c-15c6cd739e6c%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://xyzp.pages.dev/706ce639-2d34-4256-8f0c-15c6cd739e6c/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fxyzp.pages.dev%2F706ce639-2d34-4256-8f0c-15c6cd739e6c%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;-----------------------用pages部署的---不勾选ECH----------------------------------------------------------
+22、节点生成项目：okokokokokokoko（CF:xyzfc@888812345.xyz)少年你相信光吗
+https://www.youtube.com/watch?v=JhVxJChDL-E
+https://github.com/byJoey/cfnew?tab=readme-ov-file
+;
+阅节点生成（域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://xyzpm.sheng202504.dpdns.org/852561da-3b9a-4476-9181-e032309824b6
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fxyzpm.sheng202504.dpdns.org%2F852561da-3b9a-4476-9181-e032309824b6%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://xyzpm.sheng202504.dpdns.org/852561da-3b9a-4476-9181-e032309824b6/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fxyzpm.sheng202504.dpdns.org%2F852561da-3b9a-4476-9181-e032309824b6%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;
+阅节点生成（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://xyzpcm.pages.dev/852561da-3b9a-4476-9181-e032309824b6
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fxyzpcm.pages.dev%2F852561da-3b9a-4476-9181-e032309824b6%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://xyzpcm.pages.dev/852561da-3b9a-4476-9181-e032309824b6/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fxyzpcm.pages.dev%2F852561da-3b9a-4476-9181-e032309824b6%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;-------------------用pages部署的----ECH----------------------------------
+23、节点生成项目：okokokokokokoko少年你相信光吗
+cloudflare:cfguo@s1977.de5.net 密码：Tony1234!guo
+https://www.youtube.com/watch?v=JhVxJChDL-E
+;
+https://github.com/byJoey/cfnew?tab=readme-ov-file
+;
+阅节点生成（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://de5p.pages.dev/80aea886-e02a-4864-9ea1-07c19a3d6e4b
+;
+clash:
+https://de5p.pages.dev/80aea886-e02a-4864-9ea1-07c19a3d6e4b/sub?target=clash
+v2rayN:
+https://de5p.pages.dev/80aea886-e02a-4864-9ea1-07c19a3d6e4b/sub
+sing-box:
+https://url.v1.mk/sub?target=singbox&url=https%3A%2F%2Fde5p.pages.dev%2F80aea886-e02a-4864-9ea1-07c19a3d6e4b%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+;---------------------------用Pages v2.9.4部署的----------不勾选ECH-------------------
+24、节点生成项目：okokokokokokoko少年你相信光吗
+CF:xyz05@888812345.xyz，密码：Tony1234!guo
+https://shnguo.pages.dev/c67cfbf0-552b-477c-b567-2958731109c3
+https://www.youtube.com/watch?v=JhVxJChDL-E
+
+https://github.com/byJoey/cfnew?tab=readme-ov-file
+;
+阅节点生成（无域名）:Karing：OKOKOKOKOKOKOKOKOKOK
+https://shnguo.pages.dev/c67cfbf0-552b-477c-b567-2958731109c3
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fshnguo.pages.dev%2Fc67cfbf0-552b-477c-b567-2958731109c3%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+v2rayN:
+https://shnguo.pages.dev/c67cfbf0-552b-477c-b567-2958731109c3/sub
+
+；使用域名：
+https://shn.s1988.us.ci/c67cfbf0-552b-477c-b567-2958731109c3
+;
+clash:
+https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fshn.s1988.us.ci%2Fc67cfbf0-552b-477c-b567-2958731109c3%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FbyJoey%2Ftest%2Frefs%2Fheads%2Fmain%2Ftist.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true
+
+v2rayN:
+https://shn.s1988.us.ci/c67cfbf0-552b-477c-b567-2958731109c3/sub
+;----------------------------------------------------------------------------------------
+
+
