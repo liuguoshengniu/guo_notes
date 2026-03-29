@@ -1,0 +1,26 @@
+openclaw
+教你用免费 Gemini 满血复活 OpenClaw教学：
+https://youtu.be/7MMf7Q5GYFw?si=VCUKDwhdSQd-DCUK
+
+在OEC ISTROREos通过 iStoreOS 网页插件安装的openclaw
+telegram的BotFather机器人建立的用户名：guoclaw
+@guoshengclawbot
+密钥： 
+8662521194:AAH61QI-f6KxqGWUTdshqH5Z78VFGT8RCBQ
+
+minimax-cn/MiniMax-M2.5 free来源
+https://app.kilo.ai/claw
+注册：shengtony22@gmail.com
+
+API:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnYiOiJwcm9kdWN0aW9uIiwia2lsb1VzZXJJZCI6IjczYmQzZDg3LTE1ZWEtNDY2ZC04ZGVhLWQxNTliN2ViNzkwNSIsImFwaVRva2VuUGVwcGVyIjpudWxsLCJ2ZXJzaW9uIjozLCJpYXQiOjE3NzM5ODIzODMsImV4cCI6MTkzMTY2MjM4M30.7DLom7x038e2R9nX77iRDYVp79G_VJijr5-tmAb-HEg
+
+URL:
+https://api.kilo.ai/api/gateway
+
+教学：
+https://youtu.be/7MMf7Q5GYFw?si=VCUKDwhdSQd-DCUK
+
+chmod +x gum-0.17.0-1.aarch64.rpm
+
+./gum-0.17.0-1.aarch64.rpm
