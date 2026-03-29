@@ -1,0 +1,32 @@
+lunes VPS
+教学：https://www.youtube.com/watch?v=fWkkJpaIdZk
+登录：
+liugsniu@gmail.com
+Bp@@bb4v8FKZ3DG
+QAamm8@LKPeKSSt
+Tony1234/
+
+一键部署：
+curl -Ls https://raw.githubusercontent.com/eishare/tuic-hy2-node.js-python/main/hy2.sh| sed 's/\r$//' | bash -s -- 3060
+
+
+
+
+保活代码（已经形成鼠标点击执行文件E:\VPS\VPS保活.vbs）：
+Dim objShell
+Set objShell = WScript.CreateObject("WScript.Shell")
+MsgBox "VPS 已经 10 天了！为了防止被删，请立刻签到！点击【确定】将自动打开后台网页。", 4096 + 48, "VPS保活提醒"
+objShell.Run "https://betadash.lunes.host/servers/68422"
+
+
+上面代码实际上是每个15天之内在浏览器上执行一次：https://betadash.lunes.host/servers/68422，进入一次我的lunes控制面板(liugsniu@gmail.com)。因此在手机浏览器是也可以执行。
+
+wasmer+lunes合并生成的节点：
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/iv0N2d5
+SingBox Link:
+https://clash.mcx.qzz.io/b/iv0N2d5
+Clash Link:
+https://clash.mcx.qzz.io/c/iv0N2d5
+Surge Link:
+https://clash.mcx.qzz.io/s/iv0N2d5
