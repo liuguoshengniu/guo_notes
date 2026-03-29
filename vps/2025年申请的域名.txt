@@ -1,0 +1,420 @@
+
+；----------------------------------------------------------------------------------
+也可以用xxx@888812345.xyz注册无数Cloudflare账户，
+	他们也是可以通过shengtony22@gmail.com结束注册信息。
+；---------------------------------------------------------------------------
+
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+域名或VPS到期前提醒续期：
+；
+https://guotime.guo20251004.dpdns.org/admin
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+-----------------------------------------------------
+以下为申请的域名总汇：
+-----------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+s1988liu@gmail.com
+登录用户名：s1988liu
+Tony1234!
+十年期2035年3月16日到期
+付费域名：978668.xyz
+已经托管到cloudflare(注册：s1988liu@gmail.com)
+--------------------------------------------------------------------
+申请了2个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+liuguoshengniu@gmail.com
+登录用户名：shengniu
+Tony1234/
+十年期2035年10月3日到期
+付费域名1：8881977.xyz
+已经托管到cloudflare(注册：liuguoshengniu@gmail.com,Tony1234!guo)
+付费域名2：888812345.xyz
+已经托管到cloudflare(注册：shengtony22@gmail.com,Tony1234!guo)
+--------------------------------------------------------------------
+申请了1个付费域名,OKOKOKOKOKOKOKOK
+域名的公司：https://www.spaceship.com/launchpad/
+shengtony88@gmail.com
+登录用户名：shengtony88356765
+Tony1234!
+十年期2035年3月12日到期
+付费域名：356765.xyz
+已经托管到cloudflare(注册：shengtony88@gmail.com,Tony1234/)
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+需要每180天续签一次再续下一个年度继续使用:(已经续期到20270424)
+https://dash.domain.digitalplat.org/panel/manager/shengtony88.dpdns.org
+https://dash.domain.digitalplat.org/panel/manager/sheng202504.dpdns.org
+；
+https://dash.domain.digitalplat.org/
+通过shengtony88@gmail.com的github申请的
+Tony1234!
+；
+1、 shengtony88.dpdns.org（已经绑定到用guolie53@gmail.com注册的CF:Tony1234!guo）
+2、sheng202504.dpdns.org（已经绑定到用xyzfc@888812345.xyz注册的CF:Tony1234!guo）
+--------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每180天续签一次再续下一个年度继续使用(已经续期到20270425)
+https://dash.domain.digitalplat.org/panel/main?page=%2Fpanel%2Fmanager%2Fs1988niu.dpdns.org
+https://dash.domain.digitalplat.org/panel/main?page=%2Fpanel%2Fmanager%2Fguo202504.dpdns.org
+；
+https://dash.domain.digitalplat.org/
+通过s1988niu@gmail.com的github申请的
+Tony1234!
+1、s1988niu.dpdns.org（已经绑定到用s1988niu@gmail.com注册的CF）
+2、guo202504.dpdns.org（已经托管到用fc88@888812345.xyz，注册的CF：Tony1234!guo）
+-------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-09,OKOKOKOKOKOKOKOK
+永久免费，默认注册期限为一年（365 天），但距离到期日不足 180 天时（即2026-04-05后），可续订下一年度。
+说明教程：https://www.youtube.com/watch?v=e4TxSoQfbEs
+https://dash.domain.digitalplat.org/
+通过shengtonyliu@gmail.com的github申请的
+Tony1234!(或/)
+1、shengtonyliu.dpdns.org（已经绑定到用shengtonyliu@gmail.com注册的CF）
+-------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-09,OKOKOKOKOKOKOKOK
+永久免费，
+说明教程：https://www.youtube.com/watch?v=7laVmEfgC9o
+ 
+Tony1234!(或/)
+1、g00.indevs.in （已经绑定到用liuguoshengtony@gmail.com注册的CF）
+
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-04,OKOKOKOKOKOKOKOK
+
+需要每年续签一次再续下一个年度继续使用
+https://dash.domain.digitalplat.org/
+https://dash.domain.digitalplat.org/panel/main?page=%2Fpanel%2Fmanager%2Fsheng123456.dpdns.org
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234!
+1、 sheng123456.dpdns.org（已经绑定到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-01,OKOKOKOKOKOKOKOK
+需要y一年有效期（续费日期）：2026-10-01
+https://customer.l53.net/order/service/manage/119802
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234/
+1、 guol53.ggff.net（已经托管到用liuguosheng123456@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-12-03,OKOKOKOKOKOKOKOK
+需要2年有效期（续费日期）：2027-12-03
+https://customer.l53.net/order/service/manage/131493
+通过liuguosheng123456@gmail.com的github申请的
+Tony1234/
+1、 1977l53.ggff.net（已经托管到用liuguosheng1988@gmail.com注册的CF）OKOKOKOKOKOKOKOKOKOK
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-12-03,OKOKOKOKOKOKOKOK
+需要2年有效期（续费日期）：2027-12-03
+https://customer.l53.net/order/service/manage/131544
+通过liuguoshengguo@gmail.com的github申请的
+Tony1234/
+1、 1959guo.ggff.net（已经托管到用liuguoshengguo@gmail.com注册的CF）OKOKOKOKOKOKOKOKOKOK
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级域名,2025-10-05,OKOKOKOKOKOKOKOK
+永久免费，默认注册期限为一年（365 天），但距离到期日不足 180 天时（即2026-04-05后），可续订下一年度。
+说明教程：https://www.youtube.com/watch?v=e4TxSoQfbEs
+https://dash.domain.digitalplat.org/panel/main?page=%2Fpanel%2Fregister%2Fcheck
+Tony1234!
+1、 niu20251005.qzz.io（已经绑定到用niu@888812345.xyz注册的CF，密码：Tonyguoniu4!）
+2、guo20251004.dpdns.org（已经绑定到用shengtonyniu@gmail.com注册的CF，密码：Tonyguoniu4!）
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-23,
+https://www.cloudns.net/records/domain/10756715/
+clguo25.abrdns.com(用s1988niu@gmail.com申请的)
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-10-23
+https://www.cloudns.net/records/domain/10756715/
+clniu.cloud-ip.cc(已经绑定到用liuguoshengniu@gmail.com申请的)
+clniu.cloud-ip.cc
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级IP6域名,2025-10-30,OKOKOKOKOKOKOKOK
+教学：https://www.youtube.com/watch?v=8WoEco8FTso
+https://tunnelbroker.net/tunnel_detail.php?tid=999481
+shengtonyniu
+tony1234
+地址生成器：https://ip-geoaddress-generator.pages.dev/
+IPv6地址转IP6.ARPA域名：https://ipv6.jiemi360.workers.dev/
+IP6:2001:470:d:c30::/64
+生成的域名：
+6.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa（托管cf:shengtonyniu@gmail.com，密码：Tonyguoniu4!）区域ID:74049e4b8c2527c99a1eb45a15bea061，帐户 ID：64efe2ed05d15349286daa5198198002
+
+0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa（托管cf:shengtonyniu@gmail.com，密码：Tonyguoniu4!）区域ID:9d87be971dc3b5ad2f4bd47ea4c0cc94，帐户 ID：64efe2ed05d15349286daa5198198002
+
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级IP6域名,2025-10-30,OKOKOKOKOKOKOKOK
+教学：https://www.youtube.com/watch?v=8WoEco8FTso
+https://tunnelbroker.net/tunnel_detail.php?tid=999481
+shengtonyniu
+tony1234
+2001:470:d:c30::/64
+生成的域名：
+9.d.6.7.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa（托管cf:shengtonyguo@gmail.com，密码：Tonyguoniu4!）
+1.6.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa（托管cf:shengtonyguo@gmail.com，密码：Tonyguoniu4!）
+$---------------------------------------------------------------------------------------------------------------
+申请了2个免费二级IP6域名,2025-10-30,OKOKOKOKOKOKOKOK
+教学：https://www.youtube.com/watch?v=8WoEco8FTso
+https://tunnelbroker.net/tunnel_detail.php?tid=999481
+shengtonyniu
+tony1234
+2001:470:d:c30::/64
+生成的域名：
+2.1.2.4.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa   (托管cf:liugs1977@gmail.com，密码：Tonyguoniu4!)
+b.3.8.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa    (托管cf:liugs1977@gmail.com，密码：Tonyguoniu4!)
+$---------------------------------------------------------------------------------------------------------------
+
+免费二级域名：
+https://www.netlib.re/
+(,通过liuguoshengtony@gmail.com
+注册的github,密码:tony1234git，保活工作流程，实现该域名永久有效)
+密码：T1n2o3y4shengguo!
+XQxYAVCn4.ekAQq
+1、免费域名：（托管CF:liuguoshengtony@gmail.com,Tonyguoniu4!）
+guosheng.netlib.re
+2、免费域名：（托管CF:liuguoshengtony@gmail.com,Tonyguoniu4!）
+牛生.netlib.re
+$---------------------------------------------------------------------------------------------------------------
+申请了1个免费二级域名,2025-12-09,OKOKOKOKOKOKOKOK
+永久免费。
+说明教程：https://www.youtube.com/watch?v=OLS9LBTOjDE
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+1、 s1977.de5.net（已经绑定到用liuguoshengguo@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+请了1个免费二级域名,2025-12-09,OKOKOKOKOKOKOKOK
+永久免费。
+说明教程：https://www.youtube.com/watch?v=OLS9LBTOjDE
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+1、g1977.de5.net（已经托管到用liuguosheng88@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+请了2个免费二级域名,2025-12-09,OKOKOKOKOKOKOKOK (2025-12-09 18:55)
+续订：免费续订窗口在到期前 180 天开放。(2026-06-19 可续订)
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+;
+CF:cdniu@888812345.xyz，Tony1234!guo
+niu1977.cc.cd    (2025-12-09 18:55)
+;
+CF:ccniu@888812345.xyz，Tony1234!guo
+niu1977.ccwu.cc    (2025-12-09 18:55)
+$---------------------------------------------------------------------------------------------------------------
+
+请了1个免费二级域名,2025-12-14,OKOKOKOKOKOKOKOK
+永久免费。
+说明教程：https://www.youtube.com/watch?v=OLS9LBTOjDE
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+1、u1977.de5.net（已经托管到用s1988niu@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+请了1个免费二级域名,2025-12-15,OKOKOKOKOKOKOKOK
+永久免费。
+说明教程：https://www.youtube.com/watch?v=OLS9LBTOjDE
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+1、i1977.de5.net（已经托管到用shengtonyguo@gmail.com注册的CF）
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+有效期一年（2026年06月29日到期）
+2026年06月26日-30日可以续费：https://cctld.kg/en/pid/balance/logs
+https://cctld.kg/en/pid/domains/GUO202506.EDU.KG/view
+guo202506.edu.kg
+登录注册：
+https://cctld.kg
+登录用 PID：AI-351897-KG（s1988liu@gmail.com）
+Tony1234/
+绑定在CLOUDKLARE域（s1988liu@gmail.com）
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+永久免费（2025年12月31日）
+https://www.dynu.com/zh-CN/ControlPanel/DDNS
+1988.mywire.org
+n1977.ooguy.com
+u1977.ooguy.com
+登录注册：
+用户：u1977
+(liuguoshengguo@gmail.com)
+Tony1234/
+但都无法托管到cloudflare
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+https://domain.stackryze.com/my-domains
+(s1988guo的github注册的域名申请网站)
+有效期一年（2027年01月02日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+CF:(liugs1977@gmail.com)
+s1977.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的3域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(s1988guo的github注册的域名申请网站)
+有效期一年（2027年01月02日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+CF:(c1988guo@gmail.com)
+s19.indevs.in
+;
+https://my.dnshe.com/index.php?m=domain_hub
+Tony1234/
+n1977.de5.net
+l1977.de5.net
+$---------------------------------------------------------------------------------------------------------------
+成功申请的2域名：
+https://my.dnshe.com/index.php?m=domain_hub
+有效期一年（2027年03月12日到期）✓ 到期前 180 天可续订(2026年09月22日到期） • 包含电子邮件提醒
+CF:(usci@888812345.xyz , Tony1234!guo)
+l1988.us.ci
+CF:(usci2@888812345.xyz , Tony1234!guo)
+n1988.us.ci
+$---------------------------------------------------------------------------------------------------------------
+成功申请的1域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(s1988guo的github注册的域名申请网站)
+有效期一年（2027年01月02日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+CF:(liuguosheng05@gmail.com)
+s05.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(s1988guo的github注册的域名申请网站)
+有效期一年（2027年01月02日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+CF:(liuguosheng654321@gmail.com)
+s88.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(s1988guo的github注册的域名申请网站)
+有效期一年（2027年01月02日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+CF:(shengtony22@gmail.com)
+s77.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(shengtonyniu的github注册的域名申请网站)
+有效期一年（2027年01月09日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+https://domain.stackryze.com/domains/6960ecc2c353cf30f17ef7b9
+CF:(g66@888812345.com，Tony1234!guo)
+g66.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(shengtonyniu的github注册的域名申请网站)
+有效期一年（2027年01月09日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+https://domain.stackryze.com/domains/6960ecc2c353cf30f17ef7b9
+CF:(shengtony88@gmail.com)
+g77.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(shengtonyniu的github注册的域名申请网站,Tony1234!guo)
+有效期一年（2027年01月09日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+https://domain.stackryze.com/domains/6960ecc2c353cf30f17ef7b9
+CF：xyzbpb@888812345.xyz，Tony1234!guo
+g55.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的域名：
+教学：https://www.youtube.com/watch?v=7cZC4G7je1U&t=48s
+(shengtonyniu的github注册的域名申请网站)
+有效期一年（2027年01月09日到期）✓ 到期前 60 天可续订 • 包含电子邮件提醒
+https://domain.stackryze.com/domains/6960ecc2c353cf30f17ef7b9
+CF:(s1988liu@gmail.com)
+g11.indevs.in
+$---------------------------------------------------------------------------------------------------------------
+成功申请的一年域名：(2026-01-27)
+教学：https://www.youtube.com/watch?v=hUrnbdYSDV4
+https://www.gname.com/user#/domain_info/ym=liugs.eu.cc
+基本信息：
+shengtony2026@gmail.com
+用户ID:374153
+PIN:707219
+Tony1234/
+有效期一年（2027年01月26日到期）✓ 到期前 90 天可续订，2026年11月27日至2027年01月27日前免费续期 • 包含电子邮件提醒
+续签地址：https://www.gname.com/tld-eu-cc.html#registered
+CF:(shengtony2026@gmail.com)
+域名：liugs.eu.cc
+$---------------------------------------------------------------------------------------------------------------
+成功申请的一年域名：(2026-01-27)
+教学：https://www.youtube.com/watch?v=hUrnbdYSDV4
+https://www.gname.com/user#/domain_info/ym=guo88.eu.cc
+基本信息：
+liugsniu@gmail.com
+用户ID:374233
+PIN:264041
+Tony1234/
+有效期一年（2027年01月26日到期）✓ 到期前 90 天可续订，2026年11月27日至2027年01月27日前免费续期 • 包含电子邮件提醒
+续签地址：https://www.gname.com/tld-eu-cc.html#registered
+CF:(liugsniu@gmail.com)
+域名：guo88.eu.cc
+$---------------------------------------------------------------------------------------------------------------
+成功申请的一年域名：(2026-02-06)
+教学：https://www.youtube.com/watch?v=hUrnbdYSDV4
+https://www.gname.com/user#/domain_info/ym=guo88.eu.cc
+基本信息：
+guosheng5911@gmail.com
+用户ID:
+PIN:
+Tony1234/
+有效期一年（2027年02月06日到期）✓ 到期前 90 天可续订，2026年12月07日至2027年02月06日前免费续期 • 包含电子邮件提醒
+续签地址：https://www.gname.com/tld-eu-cc.html#registered
+CF:(liugs1988@gmail.com)
+域名：guo5911.eu.cc
+$---------------------------------------------------------------------------------------------------------------
+成功申请的一年域名：(2026-02-06)
+教学：https://www.youtube.com/watch?v=hUrnbdYSDV4
+https://www.gname.com/user#/domain_info/ym=guo88.eu.cc
+基本信息：
+liugs1988@gmail.com
+用户ID:
+PIN:
+Tony1234/
+有效期一年（2027年02月06日到期）✓ 到期前 90 天可续订，2026年12月07日至2027年02月06日前免费续期 • 包含电子邮件提醒
+续签地址：https://www.gname.com/tld-eu-cc.html#registered
+CF:(huiguo1988@gmail.com)
+域名：guo1988.eu.cc
+$---------------------------------------------------------------------------------------------------------------
+成功申请的一年域名：(2026-02-06)
+教学：https://www.youtube.com/watch?v=hUrnbdYSDV4
+https://www.gname.com/user#/domain_info/ym=guo1977.eu.cc
+基本信息：
+huiguo1988@gmail.com
+用户ID:
+PIN:
+Tony1234/
+有效期一年（2027年02月09日到期）✓ 到期前 90 天可续订，2026年12月07日至2027年02月06日前免费续期 • 包含电子邮件提醒
+续签地址：https://www.gname.com/tld-eu-cc.html#registered
+CF:(huiguo1988@gmail.com)
+域名：guo1977.eu.cc
+#---------------------------------------------------------------------------------------------
+成功申请的五个域名：
+https://my.dnshe.com/index.php?m=domain_hub
+liuguoshengtony@gmail.com,密码：Tony1234/
+有效期10年（2036-03-06到期）✓ 系统将在域名到期前 180 天内开启免费续期通道，2026年07月07日至2026年12月16日前免费续期 • 包含电子邮件提醒
+续签地址：https://my.dnshe.com/index.php?m=domain_hub
+域名控制面板账号：
+liuguoshengtony@gmail.com，
+密码：
+%anh.C}cRNmI
+；
+域名 (2025-12-18 13:21申请的永久有效域名)：
+l1977.ccwu.cc
+；
+下面四个是十年有效域名 (2026-03-06 13:59申请的永久有效域名)：
+s1977.ccwu.cc
+s1988.cc.cd
+s1988.ccwu.cc
+s1988.us.ci
+托管CF:xyz05@888812345.xyz，密码：Tony1234!guo or Tonyguoniu4!
+#---------------------------------------------------------------------------------------------
