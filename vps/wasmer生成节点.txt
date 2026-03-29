@@ -1,0 +1,96 @@
+一、wasmerVPS生成节点
+150GB/月
+https://www.youtube.com/watch?v=HHW_APHd0co
+https://github.com/eooce/python-ws
+python3 app.py
+第一个部署：
+CF:liugs1977@gmail.com
+节点生成面板（登录账号：liugs1977@gmail.com）：
+https://wasmer.io/liugs1977?tab=apps
+；------------------------------------
+使用cloudflare workers 或 snippets 反代域名liugs1977ab.wasmer.app给节点套cdn加速,也可以使用端口回源方式：
+
+export default {
+    async fetch(request, env) {
+        let url = new URL(request.url);
+        if (url.pathname.startsWith('/')) {
+            var arrStr = [
+                'liugs1977ab.wasmer.app', // 此处单引号里填写你的节点伪装域名
+            ];
+            url.protocol = 'https:'
+            url.hostname = getRandomArray(arrStr)
+            let new_request = new Request(url, request);
+            return fetch(new_request);
+        }
+        return env.ASSETS.fetch(request);
+    },
+};
+function getRandomArray(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+；-----------------------------------------------------------------
+生成的cdn加速伪装域名：wasmer.s1977.indevs.in
+；
+
+
+#222222222222222222222222222222222222222222222222222222222
+第2个wasmerVPS部署：
+CF:shengtonyguo@gmail.com
+wasguo.wasmer.app
+wasmer.i1977.de5.net
+
+export default {
+    async fetch(request, env) {
+        let url = new URL(request.url);
+        if (url.pathname.startsWith('/')) {
+            var arrStr = [
+                'wasguo.wasmer.app', // 此处单引号里填写你的节点伪装域名
+            ];
+            url.protocol = 'https:'
+            url.hostname = getRandomArray(arrStr)
+            let new_request = new Request(url, request);
+            return fetch(new_request);
+        }
+        return env.ASSETS.fetch(request);
+    },
+};
+function getRandomArray(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+#==============================================================
+二、lunes VPS生成节点:
+教学：https://www.youtube.com/watch?v=fWkkJpaIdZk
+登录：
+liugsniu@gmail.com
+Bp@@bb4v8FKZ3DG
+QAamm8@LKPeKSSt
+Tony1234/
+
+一键部署：
+curl -Ls https://raw.githubusercontent.com/eishare/tuic-hy2-node.js-python/main/hy2.sh| sed 's/\r$//' | bash -s -- 3060
+
+
+
+
+保活代码（已经形成鼠标点击执行文件E:\VPS\VPS保活.vbs）：
+Dim objShell
+Set objShell = WScript.CreateObject("WScript.Shell")
+MsgBox "VPS 已经 10 天了！为了防止被删，请立刻签到！点击【确定】将自动打开后台网页。", 4096 + 48, "VPS保活提醒"
+objShell.Run "https://betadash.lunes.host/servers/68422"
+
+
+上面代码实际上是每个15天之内在浏览器上执行一次：https://betadash.lunes.host/servers/68422，进入一次我的lunes控制面板(liugsniu@gmail.com)。因此在手机浏览器是也可以执行。
+
+#----------------------------------------------------------------------------------------------------------
+wasmer+lunes合并生成的节点：
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/iv0N2d5
+SingBox Link:
+https://clash.mcx.qzz.io/b/iv0N2d5
+Clash Link:
+https://clash.mcx.qzz.io/c/iv0N2d5
+Surge Link:
+https://clash.mcx.qzz.io/s/iv0N2d5
+自定义路径
