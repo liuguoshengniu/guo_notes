@@ -1,0 +1,79 @@
+一、R2私有无限云盘
+教学：
+https://www.youtube.com/watch?v=vD6ns5UEETs
+https://gdfr.dpdns.org/r2-guide/
+cloudflare部署:liuguoshengguo@gmail.com
+R2私有云盘名称：
+guodri
+令牌值：
+xrafnFrEz078A65PIcpf7SIKjcrJquxW31C2hDt5
+为 S3 客户端使用以下凭据：
+访问密钥 ID：
+fe578a75d45581906b712f778821f843
+机密访问密钥：
+77ef43a1d4dfcbc157b6068b79f712a10cf11716c8fa258ef91613c6b9dbdc1e
+为 S3 客户端使用管辖权地特定的终结点（端点）：
+默认欧盟 (EU)：
+https://d6ebbd26dcb367fe5e1fd611d06470e2.r2.cloudflarestorage.com
+
+
+；---------------------------------------------------------------------------
+在 C:\rclone 目录下新建一个文本文件，重命名为 mount-z.bat（可执行的批处理文件），右键编辑，复制以下代码：
+；---------------------------------------------------------------------------
+
+@echo off
+title Private Safe Box Mounter
+
+cd /d C:\rclone
+
+:: 挂载为本地 H 盘（可以自己定义盘符），配置 5G 本地缓存确保流畅
+rclone mount safe-encrypted: H: ^
+ --vfs-cache-mode full ^
+ --vfs-cache-max-size 5G ^
+ --vfs-cache-max-age 24h ^
+ --dir-cache-time 15m ^
+ --transfers 4 ^
+ --network-mode ^
+ --no-modtime ^
+ --links ^
+ --volname "My_Safe_Box"
+
+pause
+；---------------------------------------------------------------------------
+
+需要使用R2私有云盘时，在 C:\rclone 目录点击 mount-z.bat
+;	
+在最后保存R2私有云盘的配置文件，可以在其他电脑上使用R2私有云盘
+C:\Users\sheng\AppData\Roaming\rclone\rclone.conf
+
+--------------------------------------------------------------------------------------------------
+二、koofr云：
+https://app.koofr.net/app/storage/ffc222fe-3c21-4ddd-8a41-7522e4680376
+注册：liuguosheng1988@gmail.com    Tony1234/
+挂接(WebDAV)云盘信息如下：
+挂接链接：
+WebDAV挂载链接：
+https://app.koofr.net/dav/Koofr
+WebDAV谷歌云挂载链接：
+https://app.koofr.net/dav/google drive
+（其中google drive是任意取名，可以自己改名，如：https://app.koofr.net/dav/google 1988）
+用户名：
+guo_koofr
+密码：
+0y4jmz6xvjfephon
+----------------------------------------------------------------------------------------------------------------------
+三、koofr云：
+https://app.koofr.net/app/storage/ffc222fe-3c21-4ddd-8a41-7522e4680376
+注册：shengtonyniu@gmail.com    Tony1234/
+挂接(WebDAV)云盘信息如下：
+挂接链接：
+WebDAV挂载链接：
+https://app.koofr.net/dav/Koofr
+WebDAV谷歌云挂载链接：
+https://app.koofr.net/dav/google drive
+（其中google drive是任意取名，可以自己改名，如：https://app.koofr.net/dav/google tonyniu）
+用户名：
+tonyniu
+密码：
+ct55fyyn6hdvr8z8
+
