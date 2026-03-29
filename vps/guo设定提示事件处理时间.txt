@@ -1,0 +1,26 @@
+guo设定提示事件处理时间:
+教学：https://www.youtube.com/watch?v=et8SFR15bjI
+https://github.com/wangwangit/SubsTracker/blob/master/index.js
+免费域名需要每 180 天续期一次。可以使用 SubsTracker 来进行订阅提醒，不至于忘记续订，
+列如：每隔180天需要续订，将在telegram用户@nanbo7632中的@guotime弹出续费或者订阅信息。
+guosheng_bot
+https://t.me/+3K-Ogmn__gllMDk5
+
+@guotime
+
+
+Telegram 配置
+Workers ：shengtonyniu@gmail.com
+Bot Token(Use this token to access the HTTP API):
+8557986020:AAFwlEW36CFgrCDSsF9ZKuEcvwbp3Egbehw
+Chat ID:
+7230778446
+;
+事件时间设定管理页面连接：
+域名或VPS到期前提醒续期：
+https://guotime.guo20251004.dpdns.org/admin
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+；---------------------------------------------------
