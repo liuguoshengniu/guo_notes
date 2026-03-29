@@ -1,0 +1,182 @@
+请搭建S-ui（使用已经Cloudflare DNS，打开了小黄云域名rn1.356765.xyz），并可生成4个节点：【 Vless-reality 】端口:26197  Reality域名证书伪装地址：apple.com
+【 Vmess-ws-tls  】端口:2053   证书形式:TLS开启 （使用已经Cloudflare DNS，打开了小黄云域名rn1.356765.xyz）
+【  Hysteria-2   】端口:40889  证书形式:域名证书  转发多端口: 40800:40900（使用已经Cloudflare DNS，关闭了小黄云域名rn1hy2.356765.xyz）
+【    Tuic-v5    】端口:48842  证书形式:域名证书 （使用已经Cloudflare DNS，关闭了小黄云域名rn1tiuc.356765.xyz）。VPS(厂家RackNerd) IP:23.95.68.6（Ubuntu 22.版本），已经SSH连接了，能够ssh部署操作，请提供详细具体操作步骤。
+
+-----------------------------------详细步骤--------------------------------------
+既然你已经通过 SSH 连接到了 Ubuntu 22.04 的 RackNerd VPS，我们将分步完成 **x-ui (s-ui)** 的安装、**SSL 证书申请**以及 **4 个节点的详细配置**。
+
+由于你涉及到了 Cloudflare 的“小黄云”（CDN 代理），请务必注意：**WS+TLS 节点需要开启小黄云，而 Hysteria2 和 Tuic 必须关闭小黄云（仅限 DNS）**，否则 UDP 流量无法正常通过。
+
+---
+
+## 第一步：基础环境准备与 x-ui 安装
+
+首先更新系统并安装必要的工具。
+
+```bash
+apt update && apt upgrade -y
+apt install -y curl socat wget
+
+```
+
+安装原版 x-ui 或其更新版 s-ui（此处推荐使用主流的集成安装脚本）：
+
+```bash
+# 使用一键安装脚本
+bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+
+```
+
+*安装过程中会提示你设置**用户名**、**密码**和**面板端口**（建议避开常用端口，如设置为 `54321`）。*
+
+---
+
+## 第二步：申请 SSL 证书（针对 Hysteria2, Tuic, Vmess）
+
+你需要为 `rn1.356765.xyz` 申请证书。我们使用 `acme.sh`。
+
+1. **安装 acme.sh**:
+```bash
+curl https://get.acme.sh | sh
+alias acme.sh=~/.acme.sh/acme.sh
+
+```
+
+
+2. **申请证书**（请确保 Cloudflare 的解析生效，且暂时关闭小黄云以通过验证，或使用 API 方式。此处推荐最简单的 Standalone 模式，需确保 80 端口未被占用）：
+```bash
+acme.sh --upgrade --auto-upgrade
+acme.sh --set-default-ca --server letsencrypt
+acme.sh --issue -d rn1.356765.xyz --standalone
+
+```
+
+
+3. **安装证书到指定目录**:
+```bash
+mkdir -p /root/cert
+acme.sh --install-cert -d rn1.356765.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
+
+```
+
+
+*注意：对于 Hysteria2 和 Tuic 的子域名，你可以重复此步骤或直接使用泛域名证书。*
+
+---
+
+## 第三步：节点详细配置参数
+
+打开浏览器访问 `http://23.95.68.6:面板端口`，登录后点击“入站列表”添加以下节点：
+
+### 1. Vless-Reality (最推荐，直连王)
+
+* **协议**: vless
+* **端口**: `26197`
+* **传输**: tcp
+* **安全**: reality
+* **uTLS**: chrome
+* **Dest/Server Names**: `apple.com:443` (你指定的伪装地址)
+* **Short IDs**: 随意输入几个十六进制字符（如 `a1b2c3d4`）
+
+### 2. Vmess-WS-TLS (配合 Cloudflare 小黄云)
+
+* **协议**: vmess
+* **端口**: `2053` (必须是 CF 支持的 HTTPS 端口)
+* **传输**: ws (WebSocket)
+* **路径**: 随便填，如 `/proxy`
+* **安全**: tls
+* **域名**: `rn1.356765.xyz`
+* **证书路径**: `/root/cert/cert.crt`
+* **密钥路径**: `/root/cert/private.key`
+* **注意**: 在 Cloudflare 面板中，该域名的“小黄云”必须**开启**。
+
+### 3. Hysteria-2 (暴力加速)
+
+* **协议**: hysteria2
+* **端口**: `40889`
+* **域名**: `rn1hy2.356765.xyz` (需解析到 IP，**关闭**小黄云)
+* **证书/密钥**: 引用 `/root/cert/` 下对应的证书。
+* **额外配置**: 在面板的“入站设置”中找到 **Up/Down Mbps**，根据 RackNerd 实际带宽填写（如 100/100）。
+* **多端口转发**: 在 VPS 终端执行以下命令（实现 40800-40900 转发到 40889）：
+```bash
+iptables -t nat -A PREROUTING -p udp --dport 40800:40900 -j REDIRECT --to-ports 40889
+
+```
+
+
+
+### 4. Tuic-v5 (低延迟首选)
+
+* **协议**: tuic
+* **端口**: `48842`
+* **域名**: `rn1tiuc.356765.xyz` (需解析到 IP，**关闭**小黄云)
+* **证书/密钥**: 同上。
+* **UUID/Password**: 自行设置。
+* **Congestion Control**: 建议选 `bbr`。
+
+---
+
+## 第四步：防火墙放行
+
+RackNerd 的 Ubuntu 默认可能没有严格限制，但为了保险，请务必放行上述所有端口：
+
+```bash
+ufw allow 54321/tcp
+ufw allow 26197/tcp
+ufw allow 2053/tcp
+ufw allow 40889/udp
+ufw allow 40800:40900/udp
+ufw allow 48842/udp
+ufw disable # 或者直接关闭防火墙
+
+```
+
+---
+
+## 检查清单
+
+1. **Vless-Reality**: 必须关闭小黄云。
+2. **Vmess-WS-TLS**: 必须开启小黄云，Cloudflare TLS 设置为 "Full" (严格)。
+3. **Hysteria2/Tuic**: 必须关闭小黄云，且使用 UDP 协议。
+
+需要我帮你写一个自动定时重启 x-ui 服务的脚本，或者帮你生成具体的节点链接吗？
+最后操作：
+卸载/覆盖安装 3X-UI
+在你的 SSH 窗口直接运行以下命令（它会自动识别并建议你更新）：
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+------------------------------------END----------------------------------------------
+https://github.com/xiaochaib/chaiwiki/wiki/%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%96%B0%E6%89%8B%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%E3%80%81S%E2%80%90UI%E9%9D%A2%E6%9D%BF%E8%87%AA%E5%BB%BA%E4%B8%8A%E7%BD%91%E8%8A%82%E7%82%B9%E3%80%81%E5%8C%85%E5%90%AB%E5%A4%9A%E5%8D%8F%E8%AE%AE%E5%BA%94%E6%9C%89%E5%B0%BD%E6%9C%89%E3%80%81%E4%B8%80%E6%AC%A1%E5%AD%A6%E4%BC%9A
+现在用的：
+https://www.youtube.com/watch?v=BXZwZNjeaN8
+https://github.com/alireza0/s-ui
+bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
+✅ SSL证书申请完成！
+📄 证书路径: /root/rn1.356765.xyz.crt
+🔐 私钥路径: /root/rn1.356765.xyz.key
+
+2、安装S-UI
+结果：
+面板登录：
+-ui面板访问详细：
+账户名将设定为:guo_s-ui
+账户密码将设定为:tony1234
+Local address:
+https://rn1.356765.xyz:8443/guo/
+http://23.95.68.6:8443/guo/
+Global address:
+https://rn1.356765.xyz:8443/guo/
+http://23.95.68.6:8443/guo/
+
+
+
+
+
+
+
+
+
+
+
+
+
