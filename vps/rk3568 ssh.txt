@@ -1,0 +1,113 @@
+rk3568 ssh
+rk3568开发板 ssh:
+192.168.100.38
+root
+22
+tony1234
+;
+rk3568 1Panel界面(debian11.7)：
+设置1Panel端口 (默认是 37703): 
+http://192.168.100.29:37703/guo1panel 
+ 您设置的面板用户是 guo1panel 
+1Panel面板密码:  tony1234
+；===============================================================
+Ubuntu ssh开启步骤如下：（适用于新系统）
+# 1. 彻底卸载旧的 SSH（避免残留）
+apt purge -y openssh-server
+rm -rf /etc/ssh/sshd_config
+# 2. 重新安装 SSH 服务
+apt update && apt install -y openssh-server
+# 3. 强制重启 SSH 服务
+systemctl restart ssh
+systemctl enable ssh
+# 4. 检查服务状态（看是否 running）
+systemctl status ssh
+;
+编辑文件：nano /etc/ssh/sshd_config
+查找并修改以下两行：
+2
+找到 #PermitRootLogin prohibit-password 或 PermitRootLogin without-password
+将其修改为：PermitRootLogin yes
+允许密码验证：
+找到 #PasswordAuthentication yes 或 PasswordAuthentication no
+确保它变为：PasswordAuthentication yes
+保存：按 Ctrl + O -> 回车 -> Ctrl + X 退出。
+3. 重启 SSH 服务
+修改配置文件后，必须重启服务才能生效。
+执行命令：systemctl restart ssh
+;
+¬===============================================================
+## 🐳 Ubuntu 安装 Docker 的详细步骤（适用于新系统）
+
+# ✅步骤 0：彻底卸载新版 Docker（清理残留）
+
+# 停止 Docker 服务（即使启动失败也要执行）
+sudo systemctl stop docker
+sudo systemctl stop containerd
+
+# 彻底卸载新版组件
+sudo apt purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt autoremove -y && sudo apt clean
+
+# 删除残留配置和数据
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+sudo rm -rf /etc/docker
+
+### ✅ 第 1 步：更新系统软件包索引
+sudo apt update
+sudo apt upgrade -y
+### ✅ 第 2 步：安装依赖项
+sudo apt install -y \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+### ✅ 第 3 步：添加 Docker 的官方 GPG 密钥
+sudo mkdir -p /etc/apt/keyrings
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+### ✅ 第 4 步：设置 Docker 官方稳定软件源
+echo \
+  "deb [arch=$(dpkg --print-architecture) \
+  signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+### ✅ 第 5 步：更新 apt 并安装 Docker
+
+sudo apt update
+
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+### ✅ 第 6 步：启动并设置 Docker 开机自启
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+### ✅ 第 7 步：验证 Docker 安装是否成功
+
+sudo docker run hello-world
+
+运行后应该会看到如下输出说明 Docker 安装成功：
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+### ✅（可选）第 8 步： 运行 Ubuntu 24.04 容器（ARM64 版）
+
+# 拉取适配 RK356x 的 Ubuntu 24.04 镜像
+sudo docker pull arm64v8/ubuntu:24.04
+
+# 启动交互式容器（进入 Ubuntu 24.04 命令行）
+sudo docker run -it --rm arm64v8/ubuntu:24.04 bash
+
+# 安装 1Panel 运维面板（容器化部署）
+sudo docker run -d \
+  -p 7080:7080 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /opt/1panel:/opt/1panel \
+  --name 1panel \
+  --restart always \
+  1panel/1panel:latest
+#end
