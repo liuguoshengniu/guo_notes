@@ -1,0 +1,76 @@
+一、无限cloudflare邮箱：
+教学：https://www.youtube.com/watch?v=smWrAZq_2Fg
+
+从guo_mail@s1977.de5.net接收的信息被转到liuguoshengguo@gmail.com；就是说所有发给域名：xxx@s1977.de5.net结尾的邮件（例如：guo_mail@s1977.de5.net是其中之一），都被转到liuguoshengguo@gmail.com，实现无限自定义定义邮箱。
+
+API Key:re_59RPctSt_3yntZ572aA6QfywF7CBeBGN3
+
+用guo_g1@s1977.de5.net注册了一个月的企业级gemini，到2026/01/09后可以用guo_g2@s1977.de5.net重新注册企业级gemini。
+；------------------------------------------------------------------------------------
+用以下详细注册了一个域名：s1977.webn.cc；但无法托管CF
+
+https://zoneabc.net/dashboard
+无限cloudflare邮箱：
+xxxx@s1977.de5.net，
+（liuguoshengguo@gmail.com接码）
+Tony1234/
+cloudflare:cfguo@s1977.de5.net 密码：Tony1234!guo
+；------------------------------------------------------------------------------------
+二、无限cloudflare邮箱：
+教学：https://www.youtube.com/watch?v=Vhbo8_6YNDg
+ (托管cf:liugs1977@gmail.com，密码：Tonyguoniu4!)
+guo@2.1.2.4.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa都被转到:liugs1977@gmail.com
+；------------------------------------------------------------------------------------
+
+教学2：https://www.youtube.com/watch?v=Vhbo8_6YNDg
+
+
+OKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOK
+三、无限cloudflare邮箱：OKOKOKOKOKOKOKOKOKOK
+教学：https://www.youtube.com/watch?v=smWrAZq_2Fg
+
+从xxx@888812345.xyz接收的信息被转到shengtony22@gmail.com；就是说所有发给如何xxx字母组合前缀的：xxx@888812345.xyz结尾的邮件，都被转到shengtony22@gmail.com，实现无限自定义定义邮箱。
+
+API Key:re_59RPctSt_3yntZ572aA6QfywF7CBeBGN3
+
+用guo_g1@s1977.de5.net注册了一个月的企业级gemini，到2026/01/09后可以用guo_g2@s1977.de5.net重新注册企业级gemini。
+发送邮件：
+https://resend.com/signup
+API Key：
+re_C57TjuYz_7u3TJaEPBB3zcvqzbop6GQzi
+在shengtony22@gmail.com的gmail中只能用xxx@888812345.xyz发送邮件，如果想更换发件邮箱地址：
+2. 在 Gmail 中设置发送
+这是最关键的一步，你需要重复之前的“添加别名”操作：
+
+1、打开 Gmail 设置 -> “帐号和导入”。
+
+2、在“用这个地址发送邮件”处，再次点击 “添加其他电子邮件地址”。
+
+3、姓名：随你写。
+
+电子邮件地址：例如填入： 1@888812345.xyz。
+
+4、SMTP 配置：完全复用 Resend 的参数。
+
+5、SMTP 服务器：smtp.resend.com
+
+6、用户名：resend
+
+密码：使用你之前在 Resend 生成的那个 API Key（同一个 Key 支持该域名下的所有前缀）。
+API Key：
+re_C57TjuYz_7u3TJaEPBB3zcvqzbop6GQzi
+完成验证即可用1@888812345.xyz发送邮件OK。
+；----------------------------------------------------------------------------------
+四、也可以用xxx@888812345.xyz注册无数Cloudflare账户，
+	他们也是可以通过shengtony22@gmail.com结束注册信息。
+pb@s1977.de5.net
+;--------------------------------------------------------------------------------------------
+五、
+CF:xyz05@888812345.xyz，Tony1234!guo
+收件gmail：
+liugs1988@gmail.com，Tony1234!guo
+无限邮箱：
+xxx.s1988.us.ci
+
+CF：cfgguo@s1988.us.ci  ,密码：Tony1234!guo
+
