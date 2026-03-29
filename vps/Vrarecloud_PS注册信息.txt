@@ -1,0 +1,196 @@
+域名或VPS到期前提醒续期：
+https://guotime.6.0.3.c.0.d.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/admin
+http://guotime.g66.indevs.in/admin（停止了）
+或者无域名：
+https://falling-darkness-0a17.shengtonyniu.workers.dev/admin
+用户名：admin
+密码：tony1234
+
+#okokokokokokokokoOKOKOKOKOKOKOK
+#如果你刚重装完Ubuntu 22.04 64 Bit，我建议你执行这一套“丝滑操作”：
+# 1. 更新并升级所有软件包（耗时约1-2分钟）
+apt update && apt upgrade -y
+# 2. 安装必备的工具包
+apt install -y curl wget jq socat screen git bc lsof
+OR:
+apt install -y curl wget jq socat screen bayer git
+# 3. 如果提示需要重启（刚才看到的 System restart required），立即重启
+reboot
+#结束
+#okokokokokokokokoOKOKOKOKOKOKOK
+
+；4. 关于 REALITY 的额外提醒
+既然你准备安装 REALITY 协议：
+
+内核版本：Ubuntu 22.04 自带的 5.15+ 内核已经完美支持 BBR（网络加速）。你不需要再安装额外的 BBR 脚本，只需开启它即可：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+；
+防火墙：Ubuntu 默认可能开启了 ufw。如果你发现脚本装好了但连不上，记得运行 ufw disable 或者手动放行端口。
+;-------------------------------------------------------------------------------------
+详细检测VPS参数：
+curl -sL yabs.sh | bash -s -- -r
+检测VPS速度：
+wget -O /dev/null http://test.b-cdn.net/100mb.bin
+在你的 SSH 窗口中复制并粘贴以下任一命令：
+；
+选项 A：三网速度测试 (常用)
+这个脚本专门针对中国内地优化，能让你看清 VPS 的回程线路质量：
+wget -qO- --no-check-certificate https://gitlab.com/SuperManito/LinuxMirrors/-/raw/main/SpeedTest.sh | bash；（它会自动跳过失效节点
+bash <(curl -Lso- https://bench.im/hyperspeed)
+选项 B：全方位体检 (经典)
+除了测速，还会显示磁盘 IO（读写速度）、流媒体解锁情况（Netflix/Disney+）以及各地的延迟：
+wget -qO- bench.sh | bash
+---------------------------------------------------
+Vrarecloud_PS注册信息
+机器参数：
+产品名称：Starter KVM
+Processor: 1 vCPU
+Memory: 1GB RAM
+Storage: 25GB NVMe
+Bandwidth: 3TB /month
+1x IPv4 & /112 IPv6 Subnet
+;-------------------------------------------------------------------------------------------------
+这是2025年12月31日星期三发出的发票V4V​​-10002的付款收据:
+
+入门级 KVM - guohk.com (2025年12月31日 - 2026年12月30日) €29.50
+是否自动安装 VPN 软件：否 自动安装
+地区：香港
+优惠码：BF25ALLDAYSTARTER（购买：https://rarecloud.io/clients/cart.php?a=confproduct&i=1）
+小计：€10.91（支付宝）
+信用额度：€0.00
+总计：€10.91
+金额：10.91欧元
+交易号：py_3SkKrfGoRMjOtaNJ1xLneszt
+已付总额：10.91欧元
+剩余余额：0.00欧元
+状态：已付款
+您可随时登录客户专区查看您的发票历史记录。
+注意：此邮件将作为此次付款的正式收据。
+RareCloud.io
+https://rarecloud.io
+;-------------------------------------------------------------------------------
+https://rarecloud.io/clients/cart.php?a=complete
+CF:liuguoshengguo@gmail.com Tony1234!guo
+;
+https://rarecloud.io/clients/clientarea.php?action=services
+登录密码：root
+订单确认
+您的订单号是：7527862450
+如果您对订单有任何疑问，请从您的客户区提交支持工单并提供您的订单号。
+控制面板：
+https://panel.rarecloud.io/sessx1IAiXIE3P5qdN1K/index.php?#act=listvs&
+liuguoshengguo@gmail.com
+密码：)tFhYV)N%21b
+SSH 访问信息
+=============================
+IPV6:2a06:a880:0006:458f:0000:0000:0000:0001
+主 IP 地址：85.121.51.103
+服务器名称：root
+Root 密码：Tony1234/
+;===================================================================
+1、勇哥：
+bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)
+2、Sing-box 全家桶：
+https://github.com/fscarmen/sing-box
+目前运行的：		
+bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+liuguoshengguo@gmail.com注册的CF
+隧道域名：rdczt.s1977.de5.net
+cloudflared.exe service install ：eyJhIjoiZDZlYmJkMjZkY2IzNjdmZTVlMWZkNjExZDA2NDcwZTIiLCJ0IjoiZjU0YWNkNjUtMGQwOS00YWI0LTkxNzYtODgyYzA5YWJjNGM0IiwicyI6IlpEWmlNamcyT0RjdE1XWmtaQzAwTWpRekxUZzVPRFV0TWpNM05UTmlOVGMwTm1RMCJ9
+请在 Cloudflare 绑定 [rdczt.s1977.de5.net] 隧道 TYPE 为 HTTP，URL 为 [localhost:61481]
+;
+Acme 申请域名：acd.s1977.de5.net
+uuid:471a17a9-9538-4516-9bfd-ca4fa2aa3e43
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VPS状态如下：
+系统:Ubuntu 22.04.1 LTS  内核:5.15.0  处理器:amd64  虚拟化:kvm  BBR算法:bbr
+本地IPV4地址：85.121.51.103   本地IPV6地址：2a06:a880:6:458f::1
+代理IP优先级：IPV4优先出站(85.121.51.103)
+Sing-box状态：运行中
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+vless://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34567?security=reality&sni=addons.mozilla.org&fp=firefox&pbk=g426v1m7bcSfc53RjurqxKf2dD5Jk3S4PVIR4uaJ4wk&type=tcp&flow=xtls-rprx-vision&encryption=none#🇷🇴%20guohk.com%20xtls-reality
+ 
+hy2://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34568?mport=42000-43000&insecure=1&sni=addons.mozilla.org#🇷🇴%20guohk.com%20hysteria2
+ 
+tuic://471a17a9-9538-4516-9bfd-ca4fa2aa3e43:471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34569?congestion_control=bbr&alpn=h3&sni=addons.mozilla.org&udp_relay_mode=native&allow_insecure=1#🇷🇴%20guohk.com%20tuic
+ 
+nekoray://custom#eyJfdiI6MCwiYWRkciI6IjEyNy4wLjAuMSIsImNtZCI6WyIiXSwiY29yZSI6ImludGVybmFsIiwiY3MiOiJ7XG4gICAgXCJwYXNzd29yZFwiOiBcIjQ3MWExN2E5LTk1MzgtNDUxNi05YmZkLWNhNGZhMmFhM2U0M1wiLFxuICAgIFwic2VydmVyXCI6IFwiODUuMTIxLjUxLjEwM1wiLFxuICAgIFwic2VydmVyX3BvcnRcIjogMzQ1NzAsXG4gICAgXCJ0YWdcIjogXCJzaGFkb3d0bHMtb3V0XCIsXG4gICAgXCJ0bHNcIjoge1xuICAgICAgICBcImVuYWJsZWRcIjogdHJ1ZSxcbiAgICAgICAgXCJzZXJ2ZXJfbmFtZVwiOiBcImFkZG9ucy5tb3ppbGxhLm9yZ1wiXG4gICAgfSxcbiAgICBcInR5cGVcIjogXCJzaGFkb3d0bHNcIixcbiAgICBcInZlcnNpb25cIjogM1xufVxuIiwibWFwcGluZ19wb3J0IjowLCJuYW1lIjoiMS10bHMtbm90LXVzZSIsInBvcnQiOjEwODAsInNvY2tzX3BvcnQiOjB9
+
+nekoray://shadowsocks#eyJfdiI6MCwibWV0aG9kIjoiMjAyMi1ibGFrZTMtYWVzLTEyOC1nY20iLCJuYW1lIjoiMi1zcy1ub3QtdXNlIiwicGFzcyI6Ik1jdnBaOUVmenFpakwvR0JHNURaYkE9PSIsInBvcnQiOjAsInN0cmVhbSI6eyJlZF9sZW4iOjAsImluc2VjdXJlIjpmYWxzZSwibXV4X3MiOjAsIm5ldCI6InRjcCJ9LCJ1b3QiOjB9
+ 
+ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206TWN2cFo5RWZ6cWlqTC9HQkc1RFpiQT09@85.121.51.103:34571#🇷🇴%20guohk.com%20shadowsocks
+----------------------------
+trojan://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34572?security=tls&sni=addons.mozilla.org&allowInsecure=1&fp=firefox&type=tcp#🇷🇴%20guohk.com%20trojan
+ 
+vmess://eyJhZGQiOiJ0aW1lLmlzIiwiYWlkIjoiMCIsImhvc3QiOiJyZGN6dC5zMTk3Ny5kZTUubmV0IiwiaWQiOiI0NzFhMTdhOS05NTM4LTQ1MTYtOWJmZC1jYTRmYTJhYTNlNDMiLCJuZXQiOiJ3cyIsInBhdGgiOiIvNDcxYTE3YTktOTUzOC00NTE2LTliZmQtY2E0ZmEyYWEzZTQzLXZtZXNzIiwicG9ydCI6IjgwIiwicHMiOiLwn4e38J+HtCBndW9oay5jb20gdm1lc3Mtd3MiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+  # 请在 Cloudflare 绑定 [rdczt.s1977.de5.net] 隧道 TYPE 为 HTTP，URL 为 [localhost:61481]
+
+----------------------------
+vless://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@time.is:443?security=tls&sni=rdczt.s1977.de5.net&type=ws&path=/471a17a9-9538-4516-9bfd-ca4fa2aa3e43-vless?ed%3D2560&host=rdczt.s1977.de5.net&encryption=zero#🇷🇴%20guohk.com%20vless-ws-tls
+
+  # 请在 Cloudflare 绑定 [rdczt.s1977.de5.net] 隧道 TYPE 为 HTTP，URL 为 [localhost:61481]
+
+----------------------------
+vless://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34575?security=reality&sni=addons.mozilla.org&alpn=h2&fp=firefox&pbk=g426v1m7bcSfc53RjurqxKf2dD5Jk3S4PVIR4uaJ4wk&type=http&encryption=none#🇷🇴%20guohk.com%20h2-reality
+----------------------------
+vless://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34576?security=reality&sni=addons.mozilla.org&fp=firefox&pbk=g426v1m7bcSfc53RjurqxKf2dD5Jk3S4PVIR4uaJ4wk&type=grpc&serviceName=grpc&encryption=none#🇷🇴%20guohk.com%20grpc-reality
+----------------------------
+anytls://471a17a9-9538-4516-9bfd-ca4fa2aa3e43@85.121.51.103:34577?security=tls&sni=addons.mozilla.org&insecure=1&fp=firefox#🇷🇴%20guohk.com%20anytls
+
+
+
+Index:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/
+
+QR code:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/qr
+
+V2rayN 订阅:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/v2rayn
+
+NekoBox 订阅:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/neko
+
+Clash 订阅:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/clash
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/clash2
+
+SFI / SFA / SFM 订阅:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/sing-box
+
+ShadowRocket 订阅:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/shadowrocket
+
+*******************************************
+
+ 自适应 Clash / V2rayN / NekoBox / ShadowRocket / SFI / SFA / SFM 客户端:
+模版 1:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/auto
+
+模版 2:
+https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/auto2
+
+ 订阅 QRcode:
+模版 1:
+https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/auto
+
+模版 2:
+https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://rdczt.s1977.de5.net/471a17a9-9538-4516-9bfd-ca4fa2aa3e43/auto2
+
+
+
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+不含HY2,TUIC的加密通道节点：
+Xray Link (Base64):
+https://clash.mcx.qzz.io/x/ox9Ohgp
+SingBox Link:
+https://clash.mcx.qzz.io/b/ox9Ohgp
+Clash Link:
+https://clash.mcx.qzz.io/c/ox9Ohgp
+Surge Link:
+https://clash.mcx.qzz.io/s/ox9Ohgp
+自定义路径
+;
