@@ -1,0 +1,123 @@
+update passwall
+
+；----------------------------最新Passwall、 版本下载网站-------------------------------------------------------------------------------
+方法1、
+https://www.youtube.com/watch?v=o0TN8LV01i4
+https://www.youtube.com/watch?v=L1a25Cbro3A
+https://github.com/wkccd/CloudRunFilesBuilder/releases/tag/2026-03-19
+https://github.com/wukongdaily/RunFilesBuilder/releases/tag/26.3.2-1
+方法2、
+istoreos 最新升级Passwall、版本下载网站：
+https://youtu.be/zQSeyn4Gk-Q
+https://ybfl.net/sites/629.html
+;
+二、添加opkg key：
+wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+opkg-key add passwall.pub
+三、添加opkg repository：
+read release arch << EOF
+$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
+EOF
+for feed in passwall_luci passwall_packages passwall2; do
+  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
+done
+或者是：
+read arch << EOF
+$(. /etc/openwrt_release ; echo $DISTRIB_ARCH)
+EOF
+for feed in passwall_luci passwall_packages passwall2; do
+  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/snapshots/packages/$arch/$feed" >> /etc/opkg/customfeeds.conf
+done
+四、安装最新的passwall：
+opkg update
+opkg install luci-app-passwall
+五、如果是安装passwall2，执行以下代码：
+opkg update
+opkg install luci-app-passwall2
+六、安装中文包，如果你打开是英文版的，可继续执行如下代码，安装中文包：
+opkg install luci-i18n-passwall-zh-cn
+opkg install luci-i18n-passwall2-zh-cn
+七、如果你之前passwall的版本太老，或是不能正常使用，可重启软路由或者执行下面的代码：
+/etc/init.d/uhttpd restart
+；--------------------------------------------------------------------------------------------------
+方法3、
+1、passwall开源项目地址：
+istoreos科学插件：https://github.com/AUK9527/Are-u-ok/tree/main/apps
+https://github.com/Openwrt-Passwall/openwrt-passwall/releases/tag/26.1.21-1
+https://github.com/cooip-jm/passwall/releases/tag/4.72-2或者https://passwall2.org/passwall2-download/ 或者【https://github.com/xiaorouji/openwrt-passwall/releases】
+需要下载的资料如下：
+luci-19.07_luci-app-passwall_25.3.2-1_all.ipk
+luci-19.07_luci-i18n-passwall-zh-cn_25.3.2-1_all.ipk
+passwall_packages_ipk_aarch64_generic.zip（这个需要根据自己的软路由CPU架构下载）
+SSH连接工具Finalshell：【进入】
+查看CPU架构
+cat /etc/os-release |grep ARCH
+上传下载好的资料包
+系统——文件传输——选择文件——点击上传（把三个文件都上传）
+；--------------------------------------------------
+2、R2S安装
+# 进入安装包所在目录
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip passwall_packages_ipk_aarch64_generic.zip
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+#保留原有配置
+rm /usr/share/passwall/rules/proxy_host-opkg
+#完成
+---------------------------------------------------------
+接着执行 1Panel 的一键脚本：
+
+Bash
+curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh
+;---------------------------------
+在 QWRT 的 SSH 终端输入以下命令 安装passwall.（以添加第三方源的方式）：
+# 添加公钥
+wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+opkg-key add passwall.pub
+
+# 添加软件源（自动识别版本和架构）
+echo "src/gz passwall https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*})/$(. /etc/openwrt_release ; echo $DISTRIB_ARCH)/passwall2" >> /etc/opkg/customfeeds.conf
+
+# 更新并安装
+opkg update
+opkg install luci-app-passwall2 luci-i18n-passwall2-zh-cn
+
+;---------------------------------------------------------------------------------
+3、OEC_的CPU架构:
+OPENWRT_ARCH="aarch64_cortex-a53"
+;-----------------------------------------------------
+# 进入安装包所在目录
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip passwall_packages_ipk_x86_64.zip
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+#保留原有配置
+rm /usr/share/passwall/rules/proxy_host-opkg
+#完成
+;---------------------------------------------------------------------------
+
+opkg install luci-app-openclash_0.46.086_all.ipk
+
+
+
+cd /tmp/upload
+# 查看目录下所有文件
+ls
+# 解压安装包
+unzip clash-linux-arm64.tar
+# 安装所有软件包
+opkg install *.ipk --force-reinstall
+
+clash-linux-arm64.tar
+
+opkg install sox_14.4.2-4_aarch64_cortex-a53.ipk
+
+alsa-ucm-conf_1.2.6.1-1_aarch64_cortex-a53.ipk
+opkg install --force-depends alsa-ucm-conf_*.ipk
+opkg install --force-depends alsa-ucm-conf-1.2.11-r1.apk
